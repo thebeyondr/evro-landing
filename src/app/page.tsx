@@ -117,7 +117,7 @@ export default function Home() {
     
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {/* Stability Pools - Top Left */}
-      <div className="bg-[#ECF2E8BF] p-8 border">
+      <div className="bg-[#ECF2E8BF] p-12 md:pt-20 border">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
           Stability Pools
         </h3>
@@ -128,7 +128,7 @@ export default function Home() {
       </div>
 
       {/* Multi-Collateral Mechanism - Top Right */}
-      <div className="bg-[#ECF2E8BF] p-8 border md:row-span-2 md:mt-32">
+      <div className="bg-[#ECF2E8BF] p-12 md:pt-20 border md:row-span-2 md:mt-16">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
           Multi-Collateral Mechanism
         </h3>
@@ -139,7 +139,7 @@ export default function Home() {
       </div>
 
       {/* Seamless Integration - Middle Left */}
-      <div className="bg-[#ECF2E8BF] p-8 border md:row-span-2 md:mb-52">
+      <div className="bg-[#ECF2E8BF] p-12 md:pb-20 border md:row-span-2 md:mb-36">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
           Seamless Integration
         </h3>
@@ -150,7 +150,7 @@ export default function Home() {
       </div>
 
       {/* Immutable Protocol - Bottom Right */}
-      <div className="bg-[#ECF2E8BF] p-8 border">
+      <div className="bg-[#ECF2E8BF] p-12 md:pb-20 border">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
           Immutable Protocol
         </h3>
