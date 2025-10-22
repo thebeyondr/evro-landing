@@ -103,68 +103,68 @@ export default function Home() {
 </section>
         <Image src="/assets/img-stats-corefeature.png" height={1920} width={400} alt="stats-corefeature-connector" className="w-full h-auto object-fit" />
         {/* Core Features */}
-        <section 
-          className="py-16 md:py-24"
-          style={{
-            backgroundImage: "url('/assets/img-corefeature.png')",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="tracking-[-0.2em] text-4xl sm:text-5xl font-bold text-center text-center mb-16">
-              CORE FEATURES
-            </h2>
-            
-            <div className="">
-              <div className="bg-[#ECF2E8BF] p-8 border py-16">
-                <h3 className="text-2xl font-bold tracking-[-0.2em]">
-                  Stable Pools
-                </h3>
-                <br/>
-                <p className="text-4xl font-thin">
-                  Autonomous pools distribute collateral proceeds according to deterministic
-                  smart contract rules. No discretionary control or managed yield.
-                </p>
-              </div>
-              <br/>
-              <div className="bg-[#ECF2E8BF] p-8 border py-16">
-                <h3 className="text-2xl font-bold tracking-[-0.2em]">
-                  Seamless Integration
-                </h3>
-                <br/>
-                <p className="text-4xl font-thin">
-                  Designed for composability - wallets, interfaces and DeFi tools
-                  can interact with EVRO contracts directly through permissionless endpoints.
-                </p>
-              </div>
-              <br/>
-              <div className="bg-[#ECF2E8BF] p-8 border py-16">
-                <h3 className="text-2xl font-bold tracking-[-0.2em]">
-                  Collateral Mechanism
-                </h3>
-                <br/>
-                <p className="text-4xl font-thin">
-                  Vaults automatically generate synthetic value units backed by digital collateral.
-                  All parameters are enforced on-chain and transparent to every participant.
-                </p>
-              </div>
-              <br/>
-              <div className="bg-[#ECF2E8BF] p-8 border py-16">
-                <h3 className="text-2xl font-bold tracking-[-0.2em]">
-                  Immutable Protocol
-                </h3>
-                <br/>
-                <p className="text-4xl font-thin">
-                  EVRO's contracts operate without administrative control or upgrade authority. The
-                  immutability of the protocol is a foundational primitive that digital economies can
-                  rely on for predictable, censorship resistant liquidity.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+       <section 
+  className="py-16 md:py-24"
+  style={{
+    backgroundImage: "url('/assets/img-corefeature.png')",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="tracking-[-0.2em] text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16">
+      CORE FEATURES
+    </h2>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Stability Pools - Top Left */}
+      <div className="bg-[#ECF2E8BF] p-8 border">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
+          Stability Pools
+        </h3>
+        <p className="text-lg md:text-xl font-thin">
+          Autonomous pools distribute collateral proceeds according to deterministic
+          smart contract rules. No discretionary control or managed yield.
+        </p>
+      </div>
 
-        <section 
+      {/* Multi-Collateral Mechanism - Top Right */}
+      <div className="bg-[#ECF2E8BF] p-8 border md:row-span-2 md:mt-32">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
+          Multi-Collateral Mechanism
+        </h3>
+        <p className="text-lg md:text-xl font-thin">
+          Vaults automatically generate synthetic value units backed by digital collateral.
+          All parameters are enforced on-chain and transparent to every participant.
+        </p>
+      </div>
+
+      {/* Seamless Integration - Middle Left */}
+      <div className="bg-[#ECF2E8BF] p-8 border md:row-span-2 md:mb-52">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
+          Seamless Integration
+        </h3>
+        <p className="text-lg md:text-xl font-thin">
+          Designed for composability — wallets, interfaces, and DeFi tools
+          can interact with EVRO contracts directly through permissionless endpoints.
+        </p>
+      </div>
+
+      {/* Immutable Protocol - Bottom Right */}
+      <div className="bg-[#ECF2E8BF] p-8 border">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
+          Immutable Protocol
+        </h3>
+        <p className="text-lg md:text-xl font-thin">
+          EVRO's contracts operate without administrative control or upgrade authority. The
+          immutability of the protocol is a foundational primitive that digital economies can
+          rely on for predictable, censorship-resistant liquidity.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+               <section 
           className="py-6"
           style={{
             backgroundImage: "url('/assets/img-community.png')",
@@ -173,7 +173,7 @@ export default function Home() {
         >
           <div className="max-w-7xl mx-auto px-5">
             <div className="text-center">
-              <h2 className="text-4xl font-bold tracking-[-0.2em]">
+              <h2 className="text-4xl sm:text-5xl font-bold tracking-[-0.2em] mt-22">
                 EVRO IS COMMUNITY GOVERNED AND OPEN-SOURCE
               </h2>
               <br/><br/>
@@ -182,15 +182,19 @@ export default function Home() {
                 INCENTIVES AMONG USERS TO FOSTER A TRANSPARENT, SUSTAINABLE DEFI ECOSYSTEM.
               </p>
               <br/>
-            <button className="bg-black text-white p-2 sm:pd-4 text-3xl w-full flex items-center justify-center">
-              <b className="tracking-[-0.2em]">PARTICIPATE</b>
-              <ArrowRight className="w-8 h-8 ml-2" />
-            </button>
+              <div className="flex justify-center">
+                <button className="bg-black text-white p-2 sm:p-4 text-3xl w-full max-w-lg flex items-center justify-center">
+                  <b className="tracking-[-0.2em]">PARTICIPATE</b>
+                  <ArrowRight className="w-8 h-8 ml-2" />
+                </button>
+              </div>
             </div>
             <br/>
-            <i>*Participation in governance does not involve offering, custodying or managing assets
-              - it concerns the evolution of the code itself.
-            </i>
+            <div className="text-center">
+              <i>*Participation in governance does not involve offering, custodying or managing assets
+                - it concerns the evolution of the code itself.
+              </i>
+            </div>
           </div>
         </section>
       </main>
@@ -199,7 +203,7 @@ export default function Home() {
         <Image src="/assets/img-logo-pattern.png" height={1920} width={400} alt="footer-connector" className="w-full h-auto" />
         <div className="text-center mx-auto px-2 py-8">
           <div className="">
-              <p className="font-thin text-3xl">
+              <p className="font-thin text-3xl text-gray-600">
                 EVRO IS AN AUTONOMOUS SOFTWARE DEPLOYED ON PUBLIC BLOCKCHAINS. 
                 IT DOES NOT ISSUE, HOLD OR REDEEM ASSETS AND IS NOT A FINANCIAL
                 SERVICE OR PRODUCT. INTERACTIONS WITH THE PROTOCOL OCCUR DIRECTLY
