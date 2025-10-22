@@ -5,9 +5,14 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white break-words tracking-tighter">
+    <div className="break-words tracking-tighter">
       {/* Header */}
-      <header className="py-7 px-4">
+      <header 
+        className="py-7 px-4"
+        style={{
+          backgroundImage: "url('/assets/img-hero.png')",
+        }}
+      >
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Image src="/assets/Evro-Logo-wordmark.svg" height={0} width={0} alt="Evro Logo" className="w-38 h-auto" />
@@ -22,7 +27,12 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="px-2 py-16">
+        <section 
+          className="px-2 py-16"
+          style={{
+            backgroundImage: "url('/assets/img-hero.png')",
+          }}
+        >
           <div>
             <h1 className="text-5xl font-black tracking-tighter text-gray-900 mb-6 sm:mb-8 leading-tight uppercase">
               AUTONOMOUS, <br/>
@@ -45,10 +55,15 @@ export default function Home() {
             </button>
           </div>
         </section>
-        <br/>
-
+        <Image src="/assets/img-hero-motivation.png" height={1920} width={400} alt="hero-motivation-connector" className="w-full h-auto" />
         {/* Vision Statement */}
-        <section className="py-24 px-2">
+        <section 
+          className="py-24 px-2"
+          style={{
+            backgroundImage: "url('/assets/img-motivation.png')",
+            backgroundPosition: "center",
+          }}
+        >
           <div>
             <div>
               <h2 className="text-4xl tracking-[-0.2em]">
@@ -62,15 +77,14 @@ export default function Home() {
                 <br/><br/>
                 <p className="text-2xl font-thin tracking-wide">
                   Decentralized design ensures that once deployed, the protocol operates independently.
-                  Evro is governed by code, not counterparties.
+                  EVRO is governed by code, not counterparties.
                 </p>
-                
               </div>
             </div>
         </section>
-
+        <Image src="/assets/img-motivation-stats.png" height={1920} width={400} alt="motivation-stats-connector" className="w-full h-auto object-fit" />
         {/* Stats Section */}
-        <section className="py-16 px-2 md:py-24">
+        <section className="py-16 px-2 md:py-24 bg-[#1D1C1E] text-white">
           <div className="max-w-7xl mx-auto">
             <div className="md:grid-cols-4 gap-10 md:gap-12">
               <div className="text-center mb-36">
@@ -90,9 +104,15 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        <Image src="/assets/img-stats-corefeature.png" height={1920} width={400} alt="stats-corefeature-connector" className="w-full h-auto object-fit" />
         {/* Core Features */}
-        <section className="py-16 md:py-24">
+        <section 
+          className="py-16 md:py-24"
+          style={{
+            backgroundImage: "url('/assets/img-corefeature.png')",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="tracking-[-0.2em] text-7xl md:text-3xl font-bold text-center text-center mb-16">
               CORE FEATURES
@@ -100,8 +120,8 @@ export default function Home() {
             
             <div className="">
               <div className="bg-[#ECF2E8BF] p-8 border py-16">
-                <h3 className="text-5xl font-bold">
-                  Stability Pools
+                <h3 className="text-2xl font-bold tracking-[-0.2em]">
+                  Stable Pools
                 </h3>
                 <br/>
                 <p className="text-4xl font-thin">
@@ -111,18 +131,18 @@ export default function Home() {
               </div>
               <br/>
               <div className="bg-[#ECF2E8BF] p-8 border py-16">
-                <h3 className="text-5xl font-bold">
+                <h3 className="text-2xl font-bold tracking-[-0.2em]">
                   Seamless Integration
                 </h3>
                 <br/>
                 <p className="text-4xl font-thin">
-                  Designed for composability -- wallets, interfaces and DeFi tools
+                  Designed for composability - wallets, interfaces and DeFi tools
                   can interact with EVRO contracts directly through permissionless endpoints.
                 </p>
               </div>
               <br/>
               <div className="bg-[#ECF2E8BF] p-8 border py-16">
-                <h3 className="text-5xl font-bold">
+                <h3 className="text-2xl font-bold tracking-[-0.2em]">
                   Collateral Mechanism
                 </h3>
                 <br/>
@@ -133,7 +153,7 @@ export default function Home() {
               </div>
               <br/>
               <div className="bg-[#ECF2E8BF] p-8 border py-16">
-                <h3 className="text-5xl font-bold">
+                <h3 className="text-2xl font-bold tracking-[-0.2em]">
                   Immutable Protocol
                 </h3>
                 <br/>
@@ -147,7 +167,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-6">
+        <section 
+          className="py-6"
+          style={{
+            backgroundImage: "url('/assets/img-community.png')",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="max-w-7xl mx-auto px-5">
             <div className="text-center">
               <h2 className="text-4xl font-bold tracking-[-0.2em]">
@@ -171,9 +197,9 @@ export default function Home() {
           </div>
         </section>
       </main>
-
       {/* Footer */}
-      <footer className="">
+      <footer className="bg-[#757BA3]">
+        <Image src="/assets/img-logo-pattern.png" height={1920} width={400} alt="footer-connector" className="w-full h-auto" />
         <div className="text-center mx-auto px-2 py-8">
           <div className="">
               <p className="font-thin text-3xl">
