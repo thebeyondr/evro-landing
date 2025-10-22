@@ -84,25 +84,23 @@ export default function Home() {
         <Image src="/assets/img-motivation-stats.png" height={1920} width={400} alt="motivation-stats-connector" className="w-full h-auto object-fit" />
         {/* Stats Section */}
         <section className="py-16 px-2 md:py-24 bg-[#1D1C1E] text-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="md:grid-cols-4 gap-10 md:gap-12">
-              <div className="text-center mb-36">
-                <div className="text-6xl font-bold my-6 tracking-[-0.2em]">1.2M</div>
-                <div className="text-3xl uppercase">LOCKED IN CONTRACT</div>
-              </div>
-              <br/>
-              <div className="text-center mb-36">
-                <div className="text-6xl font-bold my-6 tracking-[-0.2em]">8.7K</div>
-                <div className="text-3xl uppercase">OPERATIONS EXECUTED</div>
-              </div>
-              <br/>
-              <div className="text-center">
-                <div className="text-6xl font-bold my-6 tracking-[-0.2em]">75%</div>
-                <div className="text-3xl uppercase">COLLATERAL RATIO</div>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="mx-auto">
+    <div className="md:grid md:grid-cols-3 gap-10 md:gap-12 md:px-28 justify-items-center">
+      <div className="text-center mb-36 md:mb-0">
+        <div className="text-6xl font-bold my-6 tracking-[-0.2em]">1.2M</div>
+        <div className="text-xl">LOCKED IN CONTRACT</div>
+      </div>
+      <div className="text-center mb-36 md:mb-0">
+        <div className="text-6xl font-bold my-6 tracking-[-0.2em]">8.7K</div>
+        <div className="text-xl">OPERATIONS EXECUTED</div>
+      </div>
+      <div className="text-center">
+        <div className="text-6xl font-bold my-6 tracking-[-0.2em]">75%</div>
+        <div className="text-xl">COLLATERAL RATIO</div>
+      </div>
+    </div>
+  </div>
+</section>
         <Image src="/assets/img-stats-corefeature.png" height={1920} width={400} alt="stats-corefeature-connector" className="w-full h-auto object-fit" />
         {/* Core Features */}
         <section 
