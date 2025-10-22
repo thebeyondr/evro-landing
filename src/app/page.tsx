@@ -5,13 +5,15 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="break-words tracking-tighter">
+    <div 
+      className="break-words tracking-tighter"
+      style={{
+        backgroundImage: "url('/assets/img-hero.png')",
+      }}
+    >
       {/* Header */}
       <header 
         className="py-7 px-4"
-        style={{
-          backgroundImage: "url('/assets/img-hero.png')",
-        }}
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -29,9 +31,6 @@ export default function Home() {
         {/* Hero Section */}
         <section 
           className="px-2 py-16"
-          style={{
-            backgroundImage: "url('/assets/img-hero.png')",
-          }}
         >
           <div>
             <h1 className="text-5xl font-black tracking-tighter text-gray-900 mb-6 sm:mb-8 leading-tight uppercase">
