@@ -17,11 +17,15 @@ export default function Home() {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Image src="/assets/Evro-Logo-wordmark.svg" height={0} width={0} alt="Evro Logo" className="w-38 h-auto" />
+            <Link href="/">
+              <Image src="/assets/Evro-Logo-wordmark.svg" height={0} width={0} alt="Evro Logo" className="w-38 h-auto" />
+            </Link>
           </div>
           <div className="flex items-center gap-6">
             <button>
-              <FaGithub className="w-10 h-10" />
+              <Link href="https://github.com/evro-finance" target="_blank" rel="noopener noreferrer">
+                <FaGithub className="w-10 h-10 md:text-[#F5889B]" />
+              </Link>
             </button>
           </div>
         </div>
@@ -48,7 +52,7 @@ export default function Home() {
               or intermediaries.
             </p>
             <br/>
-            <button className="bg-black text-[#F5889B] border border-1 p-4 text-2xl w-full md:w-100 flex items-center justify-center">
+            <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 text-2xl w-full md:w-100 flex items-center justify-center">
               <b className="tracking-[-0.2em]">GET ON EVRO</b>
               <ArrowRight className="w-6 h-6 ml-2" />
             </button>
@@ -183,7 +187,7 @@ export default function Home() {
               </p>
               <br/>
               <div className="flex justify-center">
-                <button className="bg-black text-white p-2 sm:p-4 text-3xl w-full max-w-lg flex items-center justify-center">
+                <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-white p-2 sm:p-4 text-3xl w-full max-w-lg flex items-center justify-center">
                   <b className="tracking-[-0.2em]">PARTICIPATE</b>
                   <ArrowRight className="w-8 h-8 ml-2" />
                 </button>
