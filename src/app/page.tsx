@@ -203,7 +203,7 @@ export default function Home() {
         </section>
       </main>
       {/* Footer */}
-      <footer className="bg-[#757BA3]">
+      <footer className="bg-[#757BA3] border border-t-white">
         <Image 
           src="/assets/img-logo-pattern.png" 
           height={491} 
