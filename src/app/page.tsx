@@ -115,7 +115,7 @@ export default function Home() {
   }}
 >
   <div className="max-w-7xl mx-auto px-6">
-    <h2 className="tracking-[-0.2em] text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16">
+    <h2 className="tracking-[-0.2em] text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 ">
       CORE FEATURES
     </h2>
     

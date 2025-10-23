@@ -13,8 +13,8 @@ const lexendZetta = Lexend_Zetta({
 });
 
 export const metadata: Metadata = {
-  title: "EVRO - Open Euro Finance",
-  description: "The trusted foundation of open euro finance.",
+  title: "EVRO - EVolution in ROi",
+  description: "The decentralized foundation for DeFi.",
 };
 
 export default function RootLayout({
