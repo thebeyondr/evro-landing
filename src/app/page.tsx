@@ -115,7 +115,7 @@ export default function Home() {
   }}
 >
   <div className="max-w-7xl mx-auto px-6">
-    <h2 className="tracking-[-0.2em] text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 ">
+    <h2 className="tracking-[-0.2em] text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16">
       CORE FEATURES
     </h2>
     
@@ -204,7 +204,13 @@ export default function Home() {
       </main>
       {/* Footer */}
       <footer className="bg-[#757BA3]">
-        <Image src="/assets/img-logo-pattern.png" height={1920} width={400} alt="footer-connector" className="w-full h-auto" />
+        <Image 
+          src="/assets/img-logo-pattern.png" 
+          height={491} 
+          width={1920} 
+          alt="footer-connector" 
+          className="w-full h-auto"
+        />
         <div className="text-center mx-auto px-2 py-8">
           <div className="">
               <p className="font-thin text-3xl text-gray-600">
