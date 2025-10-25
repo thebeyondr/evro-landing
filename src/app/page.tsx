@@ -13,6 +13,7 @@ export default function Home() {
             alt=""
             fill
             quality={75}
+            priority
           />
         </div>
         <header className="py-7 px-4 sm:px-8">
@@ -38,14 +39,14 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <section className="px-2 py-10">
+        <section className=" py-8">
           <div>
-            <h1 className="text-6xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight uppercase">
+            <h1 className="text-6xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight pr-3">
               AUTONOMOUS,
-              OPEN SOURCE. 
+              OPEN SOURCE,
               VALUE.
             </h1>
-            <p className="text-2xl font-thin tracking-wide ">
+            <p className="px-2 text-3xl font-thin tracking-wide mb-2">
               <b>EVRO</b> stands for <b>EVOLUTIONARY RESONATING ORGANISM</b>. 
               An open-source protocol that maintains synthetic value units through
               fully decentralized smart-contract mechanics. Built on Liquity V2 principles
@@ -54,7 +55,7 @@ export default function Home() {
               or intermediaries.
             </p>
             <br/>
-            <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 text-2xl w-full md:w-100 flex items-center justify-center">
+            <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 text-3xl w-full md:w-100 flex items-center justify-center font-bold">
               <b className="tracking-[-0.2em]">GET ON EVRO</b>
               <ArrowRight className="w-6 h-6 ml-2" />
             </button>
@@ -62,8 +63,8 @@ export default function Home() {
         </section>
       </div>
       <main>
-        <section className="py-24 px-2 sm:px-8 relative">
-          <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
+        <section className="pt-22 sm:px-8 relative">
+          <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 250px)' }}>
             <Image 
               src="/assets/img-motivation.png" 
               alt=""
@@ -73,48 +74,48 @@ export default function Home() {
               quality={100}
             />
           </div>
-          <div className="md:grid md:grid-cols-2 gap-16 space-y-16">
+          <div className="md:grid md:grid-cols-2 gap-16 space-y-16 mt-32 px-4">
             <div>
-              <h2 className="text-4xl tracking-[-0.2em]">
+              <h2 className="text-4xl font-bold tracking-[-0.2em]">
                 <b>EVRO EXISTS FOR BUILDERS, SAVERS, AND PROTOCOLS THAT RELY ON AUTONOMOUS LIQUIDITY.</b>
               </h2>
             </div>
             <div>
-              <p className="text-2xl font-thin tracking-wide pb-8">
+              <p className="text-3xl font-thin tracking-wide pb-8">
                 By aligning incentives among vault creators, liquidators, and integrators,
                 the system sustains value stability through transparent, trustless automation.
               </p>
-              <p className="text-2xl font-thin tracking-wide">
+              <p className="text-3xl font-thin tracking-wide">
                 Decentralized design ensures that once deployed, the protocol operates independently.
                 EVRO is governed by code, not counterparties.
               </p>
             </div>
           </div>
         </section>
-        <section className="py-20 px-2 sm:px-8 text-white relative pb-62">
-        <div className="absolute inset-0 -z-10">
+        <section className="py-20 px-2 sm:px-8 text-white relative py-32">
+          <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 100px)' }}>
             <Image 
               src="/assets/img-stats.png" 
               alt=""
               fill
               loading="lazy"
               className="object-cover"
-              quality={100}
+              quality={75}
             />
           </div>
           <div className="mx-auto">
             <div className="md:grid md:grid-cols-3 gap-10 md:gap-12 md:px-28 justify-items-center">
               <div className="text-center mb-36 md:mb-0">
-                <div className="text-6xl font-bold my-6 tracking-[-0.2em]">1.2M</div>
-                <div className="text-xl">LOCKED IN CONTRACT</div>
+                <div className="text-5xl font-extrabold my-8 tracking-[-0.2em]">1.2M</div>
+                <div className="text-3xl">COLLATERAL IN CONTRACT</div>
               </div>
               <div className="text-center mb-36 md:mb-0">
-                <div className="text-6xl font-bold my-6 tracking-[-0.2em]">8.7K</div>
-                <div className="text-xl">OPERATIONS EXECUTED</div>
+                <div className="text-5xl font-extrabold my-8 tracking-[-0.2em]">8.7K</div>
+                <div className="text-3xl">OPERATIONS EXECUTED</div>
               </div>
               <div className="text-center">
-                <div className="text-6xl font-bold my-6 tracking-[-0.2em]">75%</div>
-                <div className="text-xl">COLLATERAL RATIO</div>
+                <div className="text-5xl font-extrabold my-8 tracking-[-0.2em]">75%</div>
+                <div className="text-3xl">COLLATERAL RATIO</div>
               </div>
             </div>
           </div>
@@ -179,7 +180,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-6 relative pb-12">
+        <section className="py-6 pt-2 relative pb-12">
           <div className="absolute inset-0 -z-10">
             <Image 
               src="/assets/img-community.png" 
