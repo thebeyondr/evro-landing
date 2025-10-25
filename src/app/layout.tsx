@@ -13,8 +13,8 @@ const lexendZetta = Lexend_Zetta({
 });
 
 export const metadata: Metadata = {
-  title: "EVRO - EVolution in ROi",
-  description: "The decentralized foundation for DeFi.",
+  title: "EVRO ",
+  description: "An open-source protocol that maintains synthetic value units through fully decentralized smart-contract mechanics.",
 };
 
 export default function RootLayout({
