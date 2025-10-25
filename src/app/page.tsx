@@ -15,7 +15,7 @@ export default function Home() {
             className="object-cover"
             priority
             quality={50}
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <header className="py-7 px-4 sm:px-8">
@@ -95,7 +95,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-16 px-2 md:py-24 bg-[#1D1C1E] text-white">
+        <section className="py-16 px-2 md:py-24 text-white">
+          
           <div className="mx-auto">
             <div className="md:grid md:grid-cols-3 gap-10 md:gap-12 md:px-28 justify-items-center">
               <div className="text-center mb-36 md:mb-0">
