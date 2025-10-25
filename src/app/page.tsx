@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
     <div className="break-words tracking-tighter">
-      <div className="relative">
-        <div className="absolute inset-0 -z-10">
+      <div className="relative pb-32">
+        <div className="absolute inset-0 -bottom-32 -z-10">
           <Image 
             src="/assets/img-hero.webp" 
             alt="Hero background"
@@ -41,8 +41,6 @@ export default function Home() {
             </div>
           </div>
         </header>
-
-        {/* Hero Section */}
         <section className="px-2 sm:px-8 py-16">
           <div>
             <h1 className="text-5xl font-black tracking-tighter text-gray-900 mb-6 sm:mb-8 leading-tight uppercase">
@@ -50,7 +48,6 @@ export default function Home() {
               OPEN SOURCE, 
               VALUE.
             </h1>
-            
             <p className="text-2xl font-thin tracking-wide ">
               <b>EVRO</b> stands for <b>EVOLUTIONARY RESONATING ORGANISM</b>. 
               An open-source protocol that maintains synthetic value units through
@@ -68,18 +65,7 @@ export default function Home() {
         </section>
       </div>
 
-      <main>
-        <Image 
-          src="/assets/img-hero-motivation.webp" 
-          height={164} 
-          width={1920} 
-          alt="hero-motivation-connector" 
-          className="w-full h-auto"
-          loading="lazy"
-          quality={75}
-          sizes="100vw"
-        />
-        
+      <main>        
         <section className="py-24 px-2 sm:px-8 relative">
           <div className="absolute inset-0 -z-10">
             <Image 
@@ -92,7 +78,6 @@ export default function Home() {
               sizes="100vw"
             />
           </div>
-          
           <div className="md:grid md:grid-cols-2 gap-16 space-y-16">
             <div>
               <h2 className="text-4xl tracking-[-0.2em]">
@@ -111,19 +96,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
-        <Image 
-          src="/assets/img-motivation-stats.webp" 
-          height={164} 
-          width={1920} 
-          alt="motivation-stats-connector" 
-          className="w-full h-auto"
-          loading="lazy"
-          quality={75}
-          sizes="100vw"
-        />
-        
-        {/* Stats Section */}
         <section className="py-16 px-2 md:py-24 bg-[#1D1C1E] text-white">
           <div className="mx-auto">
             <div className="md:grid md:grid-cols-3 gap-10 md:gap-12 md:px-28 justify-items-center">
@@ -142,18 +114,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
-        <Image 
-          src="/assets/img-stats-corefeature.webp" 
-          height={164} 
-          width={1920} 
-          alt="stats-corefeature-connector" 
-          className="w-full h-auto"
-          loading="lazy"
-          quality={75}
-          sizes="100vw"
-        />
-        
         <section className="py-16 md:py-24 relative">
           <div className="absolute inset-0 -z-10">
             <Image 
