@@ -91,7 +91,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-16 px-2 sm:px-8 md:py-24 text-white relative pb-62">
+        <section className="py-26 px-2 sm:px-8 text-white relative pb-62">
         <div className="absolute inset-0 -z-10">
             <Image 
               src="/assets/img-stats.png" 
@@ -123,15 +123,14 @@ export default function Home() {
           <div className="absolute inset-0 -z-20">
             <Image 
               src="/assets/img-corefeature.png" 
-              alt="Core feature background"
+              alt=""
               fill
               className="object-cover"
               loading="lazy"
               quality={100}
-              sizes="100vw"
             />
           </div>
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="mx-auto px-6 py-20">
             <h2 className="tracking-[-0.2em] text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16">
               CORE FEATURES
             </h2>
@@ -184,12 +183,11 @@ export default function Home() {
           <div className="absolute inset-0 -z-10">
             <Image 
               src="/assets/img-community.png" 
-              alt="Community background"
+              alt=""
               fill
-              className="object-cover object-center"
+              className="object-cover"
               loading="lazy"
-              quality={70}
-              sizes="100vw"
+              quality={100}
             />
           </div>
           <div className="max-w-7xl mx-auto px-5">
