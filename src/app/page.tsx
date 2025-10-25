@@ -38,11 +38,11 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <section className="px-2 sm:px-8 py-16">
+        <section className="px-2 py-10">
           <div>
-            <h1 className="text-5xl font-black tracking-tighter text-gray-900 mb-6 sm:mb-8 leading-tight uppercase">
-              AUTONOMOUS, <br/>
-              OPEN SOURCE, 
+            <h1 className="text-6xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight uppercase">
+              AUTONOMOUS,
+              OPEN SOURCE. 
               VALUE.
             </h1>
             <p className="text-2xl font-thin tracking-wide ">
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-26 px-2 sm:px-8 text-white relative pb-62">
+        <section className="py-20 px-2 sm:px-8 text-white relative pb-62">
         <div className="absolute inset-0 -z-10">
             <Image 
               src="/assets/img-stats.png" 
@@ -99,7 +99,7 @@ export default function Home() {
               fill
               loading="lazy"
               className="object-cover"
-              quality={75}
+              quality={100}
             />
           </div>
           <div className="mx-auto">
@@ -120,7 +120,7 @@ export default function Home() {
           </div>
         </section>
         <section className="py-16 md:py-24 relative bottom-26">
-          <div className="absolute inset-0 -z-20">
+          <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 200px)' }}>
             <Image 
               src="/assets/img-corefeature.png" 
               alt=""
@@ -223,15 +223,13 @@ export default function Home() {
           src="/assets/img-logo-pattern.png" 
           height={491} 
           width={1920} 
-          alt="footer-connector" 
-          className="w-full h-auto"
+          alt="Detaile EVRO logo." 
           loading="lazy"
-          quality={75}
-          sizes="100vw"
+          quality={100}
         />
         <div className="text-center mx-auto px-2 py-8">
           <div className="">
-            <p className="font-thin text-3xl text-gray-600">
+            <p className="font-thin text-2xl text-gray-600">
               EVRO IS AN AUTONOMOUS SOFTWARE DEPLOYED ON PUBLIC BLOCKCHAINS. 
               IT DOES NOT ISSUE, HOLD OR REDEEM ASSETS AND IS NOT A FINANCIAL
               SERVICE OR PRODUCT. INTERACTIONS WITH THE PROTOCOL OCCUR DIRECTLY
