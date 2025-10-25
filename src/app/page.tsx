@@ -9,13 +9,10 @@ export default function Home() {
       <div className="relative">
         <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
           <Image 
-            src="/assets/img-hero.webp" 
-            alt="Hero background"
+            src="/assets/img-hero.png" 
+            alt=""
             fill
-            className="object-cover"
-            priority
-            quality={50}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            quality={75}
           />
         </div>
         <header className="py-7 px-4 sm:px-8">
@@ -68,13 +65,12 @@ export default function Home() {
         <section className="py-24 px-2 sm:px-8 relative">
           <div className="absolute inset-0 -z-10">
             <Image 
-              src="/assets/img-motivation.webp" 
-              alt="Motivation background"
+              src="/assets/img-motivation.png" 
+              alt=""
               fill
-              className="object-cover object-center"
               loading="lazy"
-              quality={70}
-              sizes="100vw"
+              quality={75}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className="md:grid md:grid-cols-2 gap-16 space-y-16">
@@ -117,7 +113,7 @@ export default function Home() {
         <section className="py-16 md:py-24 relative">
           <div className="absolute inset-0 -z-10">
             <Image 
-              src="/assets/img-corefeature.webp" 
+              src="/assets/img-corefeature.png" 
               alt="Core feature background"
               fill
               className="object-cover object-center"
@@ -178,7 +174,7 @@ export default function Home() {
         <section className="py-6 relative">
           <div className="absolute inset-0 -z-10">
             <Image 
-              src="/assets/img-community.webp" 
+              src="/assets/img-community.png" 
               alt="Community background"
               fill
               className="object-cover object-center"
