@@ -63,14 +63,14 @@ export default function Home() {
       </div>
       <main>
         <section className="py-24 px-2 sm:px-8 relative">
-          <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
             <Image 
               src="/assets/img-motivation.png" 
               alt=""
               fill
               loading="lazy"
-              quality={75}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover"
+              quality={100}
             />
           </div>
           <div className="md:grid md:grid-cols-2 gap-16 space-y-16">
@@ -91,8 +91,17 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-16 px-2 md:py-24 text-white">
-          
+        <section className="py-16 px-2 sm:px-8 md:py-24 text-white relative pb-62">
+        <div className="absolute inset-0 -z-10">
+            <Image 
+              src="/assets/img-stats.png" 
+              alt=""
+              fill
+              loading="lazy"
+              className="object-cover"
+              quality={75}
+            />
+          </div>
           <div className="mx-auto">
             <div className="md:grid md:grid-cols-3 gap-10 md:gap-12 md:px-28 justify-items-center">
               <div className="text-center mb-36 md:mb-0">
@@ -110,15 +119,15 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-16 md:py-24 relative">
-          <div className="absolute inset-0 -z-10">
+        <section className="py-16 md:py-24 relative bottom-26">
+          <div className="absolute inset-0 -z-20">
             <Image 
               src="/assets/img-corefeature.png" 
               alt="Core feature background"
               fill
-              className="object-cover object-center"
+              className="object-cover"
               loading="lazy"
-              quality={70}
+              quality={100}
               sizes="100vw"
             />
           </div>
