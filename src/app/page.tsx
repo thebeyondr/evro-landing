@@ -6,59 +6,44 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
     <div className="break-words tracking-tighter">
-      {/* Header */}
-      <header className="py-7 px-4 sm:px-8 relative">
-        {/* Optimized hero background - using Next.js Image */}
+      <div className="relative">
         <div className="absolute inset-0 -z-10">
           <Image 
-            src="/assets/img-hero.png" 
+            src="/assets/img-hero.webp" 
             alt="Hero background"
             fill
             className="object-cover"
             priority
-            quality={100}
+            quality={50}
             sizes="100vw"
           />
         </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/">
-              <Image 
-                src="/assets/Evro-Logo-wordmark.svg" 
-                height={40} 
-                width={150} 
-                alt="Evro Logo" 
-                className="w-38 h-auto"
-                priority
-              />
-            </Link>
-          </div>
-          <div className="flex items-center gap-6">
-            <button>
-              <Link href="https://github.com/evro-finance" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="w-10 h-10 md:text-[#F5889B]" />
+        <header className="py-7 px-4 sm:px-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <Link href="/">
+                <Image 
+                  src="/assets/Evro-Logo-wordmark.svg" 
+                  height={40} 
+                  width={150} 
+                  alt="Evro Logo" 
+                  className="w-38 h-auto"
+                  priority
+                />
               </Link>
-            </button>
+            </div>
+            <div className="flex items-center gap-6">
+              <button>
+                <Link href="https://github.com/evro-finance" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="w-10 h-10 md:text-[#F5889B]" />
+                </Link>
+              </button>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <main>
         {/* Hero Section */}
-        <section className="px-2 sm:px-8 py-16 relative">
-          {/* Background continues from header */}
-          <div className="absolute inset-0 -z-10">
-            <Image 
-              src="/assets/img-hero.png" 
-              alt="Hero background"
-              fill
-              className="object-cover"
-              quality={75}
-              sizes="100vw"
-            />
-          </div>
-          
+        <section className="px-2 sm:px-8 py-16">
           <div>
             <h1 className="text-5xl font-black tracking-tighter text-gray-900 mb-6 sm:mb-8 leading-tight uppercase">
               AUTONOMOUS, <br/>
@@ -81,11 +66,12 @@ export default function Home() {
             </button>
           </div>
         </section>
-        
-        {/* Connector images with optimized loading */}
+      </div>
+
+      <main>
         <Image 
-          src="/assets/img-hero-motivation.png" 
-          height={400} 
+          src="/assets/img-hero-motivation.webp" 
+          height={164} 
           width={1920} 
           alt="hero-motivation-connector" 
           className="w-full h-auto"
@@ -94,12 +80,10 @@ export default function Home() {
           sizes="100vw"
         />
         
-        {/* Vision Statement */}
         <section className="py-24 px-2 sm:px-8 relative">
-          {/* Optimized motivation background */}
           <div className="absolute inset-0 -z-10">
             <Image 
-              src="/assets/img-motivation.png" 
+              src="/assets/img-motivation.webp" 
               alt="Motivation background"
               fill
               className="object-cover object-center"
@@ -129,8 +113,8 @@ export default function Home() {
         </section>
         
         <Image 
-          src="/assets/img-motivation-stats.png" 
-          height={400} 
+          src="/assets/img-motivation-stats.webp" 
+          height={164} 
           width={1920} 
           alt="motivation-stats-connector" 
           className="w-full h-auto"
@@ -160,8 +144,8 @@ export default function Home() {
         </section>
         
         <Image 
-          src="/assets/img-stats-corefeature.png" 
-          height={400} 
+          src="/assets/img-stats-corefeature.webp" 
+          height={164} 
           width={1920} 
           alt="stats-corefeature-connector" 
           className="w-full h-auto"
@@ -170,12 +154,10 @@ export default function Home() {
           sizes="100vw"
         />
         
-        {/* Core Features */}
         <section className="py-16 md:py-24 relative">
-          {/* Optimized core feature background */}
           <div className="absolute inset-0 -z-10">
             <Image 
-              src="/assets/img-corefeature.png" 
+              src="/assets/img-corefeature.webp" 
               alt="Core feature background"
               fill
               className="object-cover object-center"
@@ -240,10 +222,9 @@ export default function Home() {
         </section>
 
         <section className="py-6 relative">
-          {/* Optimized community background */}
           <div className="absolute inset-0 -z-10">
             <Image 
-              src="/assets/img-community.png" 
+              src="/assets/img-community.webp" 
               alt="Community background"
               fill
               className="object-cover object-center"
