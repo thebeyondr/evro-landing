@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
     <div className="break-words tracking-tighter">
-      <div className="relative pb-32">
-        <div className="absolute inset-0 -bottom-32 -z-10">
+      <div className="relative">
+        <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
           <Image 
             src="/assets/img-hero.webp" 
             alt="Hero background"
@@ -64,8 +64,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-
-      <main>        
+      <main>
         <section className="py-24 px-2 sm:px-8 relative">
           <div className="absolute inset-0 -z-10">
             <Image 
@@ -126,12 +125,10 @@ export default function Home() {
               sizes="100vw"
             />
           </div>
-          
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="tracking-[-0.2em] text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16">
               CORE FEATURES
             </h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Stability Pools - Top Left */}
               <div className="bg-[#ECF2E8BF] p-12 md:pt-20 border">
@@ -143,7 +140,6 @@ export default function Home() {
                   smart contract rules. No discretionary control or managed yield.
                 </p>
               </div>
-
               {/* Multi-Collateral Mechanism - Top Right */}
               <div className="bg-[#ECF2E8BF] p-12 md:pt-20 border md:row-span-2 md:mt-16">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
@@ -154,7 +150,6 @@ export default function Home() {
                   All parameters are enforced on-chain and transparent to every participant.
                 </p>
               </div>
-
               {/* Seamless Integration - Middle Left */}
               <div className="bg-[#ECF2E8BF] p-12 md:pb-20 border md:row-span-2 md:mb-36">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
@@ -165,7 +160,6 @@ export default function Home() {
                   can interact with EVRO contracts directly through permissionless endpoints.
                 </p>
               </div>
-
               {/* Immutable Protocol - Bottom Right */}
               <div className="bg-[#ECF2E8BF] p-12 md:pb-20 border">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.2em] mb-4">
@@ -180,7 +174,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         <section className="py-6 relative">
           <div className="absolute inset-0 -z-10">
             <Image 
@@ -193,7 +186,6 @@ export default function Home() {
               sizes="100vw"
             />
           </div>
-          
           <div className="max-w-7xl mx-auto px-5">
             <div className="text-center">
               <h2 className="text-4xl sm:text-5xl font-bold tracking-[-0.2em] mt-22">
@@ -221,7 +213,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      
       {/* Footer */}
       <footer className="bg-[#757BA3] border border-t-white">
         <Image 
