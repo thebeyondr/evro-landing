@@ -134,55 +134,55 @@ export default function Home() {
             />
           </div>
           <div className="mx-auto px-5 py-28 pb-10">
-            <h2 className="tracking-[-0.2em] text-6xl font-extrabold text-center mb-16">
+            <h2 className="tracking-[-0.2em] text-6xl md:text-7xl font-extrabold text-center mb-16">
               CORE FEATURES
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-6 relative">
-              {/* Stability Pools - Top Left */}
-              <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:row-start-1 md:row-span-1 md:p-10">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
-                  Stability Pools
-                </h3>
-                <p className="text-3xl font-extralight">
-                  Autonomous pools distribute collateral proceeds according to deterministic
-                  smart contract rules. No discretionary control or managed yield.
-                </p>
-              </div>
-
-              {/* Multi-Collateral Mechanism - Top Right */}
-              <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:row-start-1 md:row-span-2 md:col-start-2 md:self-center md:-mt-8 md:p-10">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
-                  Multi-Collateral Mechanism
-                </h3>
-                <p className="text-3xl font-extralight">
-                  Vaults automatically generate synthetic value units backed by digital collateral.
-                  All parameters are enforced on-chain and transparent to every participant.
-                </p>
-              </div>
-
-              {/* Seamless Integration - Middle Left */}
-              <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1 md:my-0 md:row-start-2 md:col-start-1 md:p-10">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
-                  Seamless Integration
-                </h3>
-                <p className="text-3xl font-extralight">
-                  Designed for composability — wallets, interfaces, and DeFi tools
-                  can interact with EVRO contracts directly through permissionless endpoints.
-                </p>
-              </div>
-
-              {/* Immutable Protocol - Bottom Right */}
-              <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1 md:my-0 md:row-start-3 md:col-start-2 md:-mt-6 md:mb-40 md:p-10">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
-                  Immutable Protocol
-                </h3>
-                <p className="text-3xl font-extralight">
-                  EVRO's contracts operate without administrative control or upgrade authority. The
-                  immutability of the protocol is a foundational primitive that digital economies can
-                  rely on for predictable, censorship-resistant liquidity.
-                </p>
-              </div>
-            </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative md:mb-50">
+  {/* Stability Pools - Top Left */}
+  <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:p-10 md:pt-40">
+    <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
+      Stability Pools
+    </h3>
+    <p className="text-3xl font-extralight">
+      Autonomous pools distribute collateral proceeds according to deterministic
+      smart contract rules. No discretionary control or managed yield.
+    </p>
+  </div>
+  
+  {/* Multi-Collateral Mechanism - Top Right */}
+  <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:p-10 md:translate-y-52 md:pt-20">
+    <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
+      Multi-Collateral Mechanism
+    </h3>
+    <p className="text-3xl font-extralight">
+      Vaults automatically generate synthetic value units backed by digital collateral.
+      All parameters are enforced on-chain and transparent to every participant.
+    </p>
+  </div>
+  
+  {/* Seamless Integration - Middle Left */}
+  <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1 md:my-0 md:pt-1 md:p-10 md:translate-y-0">
+    <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
+      Seamless Integration
+    </h3>
+    <p className="text-3xl font-extralight">
+      Designed for composability — wallets, interfaces, and DeFi tools
+      can interact with EVRO contracts directly through permissionless endpoints.
+    </p>
+  </div>
+  
+  {/* Immutable Protocol - Bottom Right */}
+  <div className="bg-[#ECF2E8BF] p-3 pb-30 md:pb-40 md:pt-1 my-1 md:my-0 md:p-10 md:translate-y-52">
+    <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
+      Immutable Protocol
+    </h3>
+    <p className="text-3xl font-extralight">
+      EVRO's contracts operate without administrative control or upgrade authority. The
+      immutability of the protocol is a foundational primitive that digital economies can
+      rely on for predictable, censorship-resistant liquidity.
+    </p>
+  </div>
+</div>
           </div>
         </section>
         <section className="py-6 pt-2 -mt-4 relative pb-12">
