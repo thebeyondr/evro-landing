@@ -122,7 +122,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="pt-16 md:py-24 relative bottom-26">
+        <section className="pt-16 md:py-24 relative bottom-20 md:bottom-6">
           <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 150px)' }}>
             <Image 
               src="/assets/img-corefeature.png" 
@@ -137,9 +137,9 @@ export default function Home() {
             <h2 className="tracking-[-0.2em] text-6xl font-extrabold text-center mb-16">
               CORE FEATURES
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 gap-6 relative">
               {/* Stability Pools - Top Left */}
-              <div className="bg-[#ECF2E8BF] p-3 py-15 md:row-span-2 my-1">
+              <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:row-start-1 md:row-span-1 md:p-10">
                 <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
                   Stability Pools
                 </h3>
@@ -148,18 +148,9 @@ export default function Home() {
                   smart contract rules. No discretionary control or managed yield.
                 </p>
               </div>
-              {/* Integration - Top Right */}
-              <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1 md:row-span-2">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
-                  Seamless Integration
-                </h3>
-                <p className="text-3xl font-extralight">
-                  Designed for composability — wallets, interfaces, and DeFi tools
-                  can interact with EVRO contracts directly through permissionless endpoints.
-                </p>
-              </div>
-              {/* Mechanism - Middle Left */}
-              <div className="bg-[#ECF2E8BF] p-3 py-15 md:row-span-2 my-1">
+
+              {/* Multi-Collateral Mechanism - Top Right */}
+              <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:row-start-1 md:row-span-2 md:col-start-2 md:self-center md:-mt-8 md:p-10">
                 <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
                   Multi-Collateral Mechanism
                 </h3>
@@ -168,8 +159,20 @@ export default function Home() {
                   All parameters are enforced on-chain and transparent to every participant.
                 </p>
               </div>
+
+              {/* Seamless Integration - Middle Left */}
+              <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1 md:my-0 md:row-start-2 md:col-start-1 md:p-10">
+                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
+                  Seamless Integration
+                </h3>
+                <p className="text-3xl font-extralight">
+                  Designed for composability — wallets, interfaces, and DeFi tools
+                  can interact with EVRO contracts directly through permissionless endpoints.
+                </p>
+              </div>
+
               {/* Immutable Protocol - Bottom Right */}
-              <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1">
+              <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1 md:my-0 md:row-start-3 md:col-start-2 md:-mt-6 md:mb-40 md:p-10">
                 <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
                   Immutable Protocol
                 </h3>
