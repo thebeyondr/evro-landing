@@ -55,7 +55,7 @@ export default function Home() {
               or intermediaries.
             </p>
             <br/>
-            <div className="justify-center flex -mb-10">
+            <div className="justify-center flex -mb-10 -mt-4">
               <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 px-10 md:w-100 flex items-center justify-center">
                 <b className="tracking-[-0.2em] text-2xl">GET ON EVRO</b>
                 <ArrowRight className="w-6 h-6 ml-2" />
@@ -76,7 +76,7 @@ export default function Home() {
               quality={100}
             />
           </div>
-          <div className="md:grid md:grid-cols-2 gap-16 space-y-16 mt-32 px-4">
+          <div className="md:grid md:grid-cols-2 md:mb-28 gap-16 space-y-16 mt-32 px-4">
             <div>
               <h2 className="text-3xl font-bold tracking-[-0.2em]">
                 <b>EVRO EXISTS FOR BUILDERS, SAVERS, AND PROTOCOLS THAT RELY ON AUTONOMOUS LIQUIDITY.</b>
@@ -106,18 +106,18 @@ export default function Home() {
             />
           </div>
           <div className="mx-auto">
-            <div className="md:grid md:grid-cols-3 gap-10 md:gap-12 md:px-28 justify-items-center">
+            <div className="md:grid md:grid-cols-3 gap-10 md:gap-52 md:px-22 justify-items-center">
               <div className="text-center mb-36 md:mb-0">
                 <div className="text-5xl font-extrabold my-8 tracking-[-0.2em]">1.2M</div>
-                <div className="text-3xl">COLLATERAL IN CONTRACT</div>
+                <div className="text-3xl md:text-lg">CONTRACT COLLATERAL</div>
               </div>
               <div className="text-center mb-36 md:mb-0">
                 <div className="text-5xl font-extrabold my-8 tracking-[-0.2em]">8.7K</div>
-                <div className="text-3xl">OPERATIONS EXECUTED</div>
+                <div className="text-3xl md:text-lg">OPERATIONS EXECUTED</div>
               </div>
               <div className="text-center">
                 <div className="text-5xl font-extrabold my-8 tracking-[-0.2em]">75%</div>
-                <div className="text-3xl">COLLATERAL RATIO</div>
+                <div className="text-3xl md:text-lg">COLLATERAL RATIO</div>
               </div>
             </div>
           </div>
