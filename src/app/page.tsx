@@ -46,7 +46,7 @@ export default function Home() {
               OPEN SOURCE,
               VALUE.
             </h1>
-            <p className="px-2 text-3xl font-thin tracking-wide mb-2">
+            <p className="px-2 text-3xl font-extralight mb-10">
               <b>EVRO</b> stands for <b>EVOLUTIONARY RESONATING ORGANISM</b>. 
               An open-source protocol that maintains synthetic value units through
               fully decentralized smart-contract mechanics. Built on Liquity V2 principles
@@ -54,11 +54,12 @@ export default function Home() {
               MANAGE AND BALANCE COLLATERALIZED VAULTS</b>, without issuers, custodians
               or intermediaries.
             </p>
-            <br/>
-            <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 text-3xl w-full md:w-100 flex items-center justify-center font-bold">
-              <b className="tracking-[-0.2em]">GET ON EVRO</b>
-              <ArrowRight className="w-6 h-6 ml-2" />
-            </button>
+            <div className="justify-center flex">
+              <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 px-10 md:w-100 flex items-center justify-center">
+                <b className="tracking-[-0.2em] text-2xl">GET ON EVRO</b>
+                <ArrowRight className="w-6 h-6 ml-2" />
+              </button>
+            </div>
           </div>
         </section>
       </div>
@@ -121,7 +122,7 @@ export default function Home() {
           </div>
         </section>
         <section className="pt-16 md:py-24 relative bottom-26">
-          <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 200px)' }}>
+          <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 150px)' }}>
             <Image 
               src="/assets/img-corefeature.png" 
               alt=""
@@ -131,7 +132,7 @@ export default function Home() {
               quality={100}
             />
           </div>
-          <div className="mx-auto px-5 py-20">
+          <div className="mx-auto px-5 py-28 pb-14">
             <h2 className="tracking-[-0.2em] text-6xl font-extrabold text-center mb-16">
               CORE FEATURES
             </h2>
