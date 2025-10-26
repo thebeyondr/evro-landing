@@ -78,7 +78,7 @@ export default function Home() {
           </div>
           <div className="md:grid md:grid-cols-2 gap-16 space-y-16 mt-32 px-4">
             <div>
-              <h2 className="text-4xl font-bold tracking-[-0.2em]">
+              <h2 className="text-3xl font-bold tracking-[-0.2em]">
                 <b>EVRO EXISTS FOR BUILDERS, SAVERS, AND PROTOCOLS THAT RELY ON AUTONOMOUS LIQUIDITY.</b>
               </h2>
             </div>
@@ -140,7 +140,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Stability Pools - Top Left */}
               <div className="bg-[#ECF2E8BF] p-3 py-15 md:row-span-2 my-1">
-                <h3 className="text-5xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
+                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
                   Stability Pools
                 </h3>
                 <p className="text-3xl font-extralight">
@@ -150,7 +150,7 @@ export default function Home() {
               </div>
               {/* Integration - Top Right */}
               <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1 md:row-span-2">
-                <h3 className="text-5xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
+                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
                   Seamless Integration
                 </h3>
                 <p className="text-3xl font-extralight">
@@ -160,7 +160,7 @@ export default function Home() {
               </div>
               {/* Mechanism - Middle Left */}
               <div className="bg-[#ECF2E8BF] p-3 py-15 md:row-span-2 my-1">
-                <h3 className="text-5xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
+                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
                   Multi-Collateral Mechanism
                 </h3>
                 <p className="text-3xl font-extralight">
@@ -170,7 +170,7 @@ export default function Home() {
               </div>
               {/* Immutable Protocol - Bottom Right */}
               <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1">
-                <h3 className="text-5xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
+                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
                   Immutable Protocol
                 </h3>
                 <p className="text-3xl font-extralight">
