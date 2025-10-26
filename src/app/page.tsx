@@ -54,7 +54,8 @@ export default function Home() {
               MANAGE AND BALANCE COLLATERALIZED VAULTS</b>, without issuers, custodians
               or intermediaries.
             </p>
-            <div className="justify-center flex">
+            <br/>
+            <div className="justify-center flex -mb-10">
               <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 px-10 md:w-100 flex items-center justify-center">
                 <b className="tracking-[-0.2em] text-2xl">GET ON EVRO</b>
                 <ArrowRight className="w-6 h-6 ml-2" />
@@ -94,7 +95,7 @@ export default function Home() {
           </div>
         </section>
         <section className="py-20 px-2 sm:px-8 text-white relative py-32">
-          <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 100px)' }}>
+          <div className="absolute inset-0 -z-10 -my-6" style={{ height: 'calc(100% + 100px)' }}>
             <Image 
               src="/assets/img-stats.png" 
               alt=""
@@ -181,7 +182,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-6 pt-2 relative pb-12">
+        <section className="py-6 pt-2 -mt-4 relative pb-12">
           <div className="absolute inset-0 -z-10">
             <Image 
               src="/assets/img-community.png" 
@@ -194,7 +195,7 @@ export default function Home() {
           </div>
           <div className="max-w-7xl mx-auto px-5">
             <div className="text-center">
-              <h2 className="text-4xl sm:text-5xl font-extrabold tracking-[-0.2em] mt-22">
+              <h2 className="text-4xl sm:text-5xl font-extrabold tracking-[-0.2em] mt-24">
                 EVRO IS COMMUNITY GOVERNED AND OPEN-SOURCE
               </h2>
               <br/><br/>
