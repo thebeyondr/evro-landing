@@ -70,7 +70,7 @@ export default function Home() {
               src="/assets/img-motivation.png" 
               alt=""
               fill
-              loading="lazy"
+              priority
               className="object-cover"
               quality={100}
             />
@@ -132,7 +132,7 @@ export default function Home() {
               quality={100}
             />
           </div>
-          <div className="mx-auto px-5 py-28 pb-14">
+          <div className="mx-auto px-5 py-28 pb-10">
             <h2 className="tracking-[-0.2em] text-6xl font-extrabold text-center mb-16">
               CORE FEATURES
             </h2>
