@@ -197,7 +197,7 @@ export default function Home() {
             />
           </div>
           <div className="max-w-7xl mx-auto px-5">
-            <div className="text-center">
+            <div className="text-center md:px-25">
               <h2 className="text-4xl sm:text-5xl font-extrabold tracking-[-0.2em] mt-24">
                 EVRO IS COMMUNITY GOVERNED AND OPEN-SOURCE
               </h2>
@@ -208,7 +208,7 @@ export default function Home() {
               </p>
               <br/>
               <div className="flex justify-center">
-                <button className="hover:-translate-y-2 font-bold transition-transform duration-300 bg-black text-white p-4 text-2xl w-full flex items-center justify-center mb-1">
+                <button className="hover:-translate-y-2 font-bold transition-transform duration-300 bg-black text-white p-4 text-2xl w-full flex items-center justify-center mb-1 md:w-100">
                   <b className="tracking-[-0.2em]">PARTICIPATE</b>
                   <ArrowRight className="w-6 h-6 ml-4" />
                 </button>
@@ -224,20 +224,18 @@ export default function Home() {
         </section>
       </main>
       {/* Footer */}
-      <footer className="bg-[#757BA3] pb-5">
-      <div className="relative w-full h-[105px] sm:h-[300px] md:h-[400px] lg:h-[491px]">
-        <Image 
-          src="/assets/img-logo-pattern.png" 
-          alt="Detailed EVRO logo."
-          fill
-          sizes="100vw"
-          loading="lazy"
-          quality={85}
-          className="object-cover my-5"
-        />
-      </div>
-        <div className="text-center mx-auto px-2 py-8">
-          <div className="">
+      <footer className="bg-[#757BA3] py-5">
+        <div className="w-full aspect-[3085/812] relative overflow-hidden">
+          <Image 
+            src="/assets/img-logo-pattern.png" 
+            alt="Detailed EVRO logo."
+            fill
+            loading="lazy"
+            quality={100}
+            className="object-cover scale-x-107"
+          />
+        </div>
+        <div className="text-center mx-auto px-2 py-8 md:px-25 lg:px-20">
             <p className="font-light text-2xl text-gray-600 mt-5">
               EVRO IS AN AUTONOMOUS SOFTWARE DEPLOYED ON PUBLIC BLOCKCHAINS. 
               IT DOES NOT ISSUE, HOLD OR REDEEM ASSETS AND IS NOT A FINANCIAL
@@ -245,7 +243,6 @@ export default function Home() {
               THROUGH SMART CONTRACTS AT THE USER'S INITIATIVE. NO ENTITY PROVIDES
               INVESTMENT ADVICE, CUSTODY or GUARANTEES OF VALUE STABILITY.
             </p>
-          </div>
         </div>
       </footer>
     </div>
