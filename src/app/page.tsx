@@ -73,7 +73,6 @@ export default function Home() {
               fill
               priority
               className="object-cover"
-              quality={100}
             />
           </div>
           <div className="md:grid md:grid-cols-2 md:mb-28 gap-16 space-y-16 mt-32 px-4">
@@ -102,7 +101,6 @@ export default function Home() {
               fill
               loading="lazy"
               className="object-cover"
-              quality={75}
             />
           </div>
           <div className="mx-auto">
@@ -130,7 +128,6 @@ export default function Home() {
               fill
               className="object-cover"
               loading="lazy"
-              quality={100}
             />
           </div>
           <div className="mx-auto px-5 py-28 pb-10">
@@ -193,7 +190,6 @@ export default function Home() {
               fill
               className="object-cover"
               loading="lazy"
-              quality={100}
             />
           </div>
           <div className="max-w-7xl mx-auto px-5">
@@ -231,7 +227,6 @@ export default function Home() {
             alt="Detailed EVRO logo."
             fill
             loading="lazy"
-            quality={100}
             className="object-cover scale-x-107"
           />
         </div>
