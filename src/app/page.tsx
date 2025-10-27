@@ -9,8 +9,10 @@ export default function Home() {
       <div className="relative px-1 md:px-4">
         <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
           <picture>
-            <source media="(max-width: 768px)" srcSet="/assets/img-hero-sm.png" />
-            <source media="(min-width: 769px)" srcSet="/assets/img-hero.png" />
+            <source media="(max-width: 768px)" srcSet="/assets/img-hero-sm.webp" type="image/webp" />
+            <source media="(max-width: 768px)" srcSet="/assets/img-hero-sm.png" type="image/png" />
+            <source media="(min-width: 769px)" srcSet="/assets/img-hero.webp" type="image/webp" />
+            <source media="(min-width: 769px)" srcSet="/assets/img-hero.png" type="image/png" />
             <img src="/assets/img-hero.png" alt="" className="w-full h-full object-cover" />
           </picture>
         </div>
@@ -37,7 +39,7 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <section className=" py-8">
+        <section className="py-8 pb-30">
           <div>
             <h1 className="text-6xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight pr-3">
               AUTONOMOUS,
@@ -63,11 +65,13 @@ export default function Home() {
         </section>
       </div>
       <main>
-        <section className="pt-22 sm:px-8 relative">
+        <section className="py-22 sm:px-8 relative">
           <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 250px)' }}>
             <picture>
-              <source media="(max-width: 768px)" srcSet="/assets/img-motivation-sm.png" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-motivation.png" />
+              <source media="(max-width: 768px)" srcSet="/assets/img-motivation-sm.webp" type="image/webp" />
+              <source media="(max-width: 768px)" srcSet="/assets/img-motivation-sm.png" type="image/png" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-motivation.webp" type="image/webp" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-motivation.png" type="image/png" />
               <img src="/assets/img-motivation.png" alt="" className="w-full h-full object-cover" />
             </picture>
           </div>
@@ -89,11 +93,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-20 px-2 sm:px-8 text-white relative py-32">
-          <div className="absolute inset-0 -z-10 -my-6" style={{ height: 'calc(100% + 100px)' }}>
+        <section className="px-2 sm:px-8 text-white relative py-32">
+          <div className="absolute inset-0 -z-10 pt-5" style={{ height: 'calc(100% + 50px)' }}>
             <picture>
-              <source media="(max-width: 768px)" srcSet="/assets/img-stats-sm.png" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-stats.png" />
+              <source media="(max-width: 768px)" srcSet="/assets/img-stats-sm.webp" type="image/webp" />
+              <source media="(max-width: 768px)" srcSet="/assets/img-stats-sm.png" type="image/png" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-stats.webp" type="image/webp" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-stats.png" type="image/png" />
               <img src="/assets/img-stats.png" alt="" className="w-full h-full object-cover" />
             </picture>
           </div>
@@ -117,8 +123,10 @@ export default function Home() {
         <section className="pt-16 md:py-24 relative bottom-20 md:bottom-6">
           <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 150px)' }}>
             <picture>
-              <source media="(max-width: 768px)" srcSet="/assets/img-corefeature-sm.png" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-corefeature.png" />
+              <source media="(max-width: 768px)" srcSet="/assets/img-corefeature-sm.webp" type="image/webp" />
+              <source media="(max-width: 768px)" srcSet="/assets/img-corefeature-sm.png" type="image/png" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-corefeature.webp" type="image/webp" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-corefeature.png" type="image/png" />
               <img src="/assets/img-corefeature.png" alt="" className="w-full h-full object-cover" />
             </picture>
           </div>
@@ -177,8 +185,10 @@ export default function Home() {
         <section className="py-6 pt-2 -mt-4 relative pb-12">
           <div className="absolute inset-0 -z-10">
             <picture>
-              <source media="(max-width: 768px)" srcSet="/assets/img-community-sm.png" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-community.png" />
+              <source media="(max-width: 768px)" srcSet="/assets/img-community-sm.webp" type="image/webp" />
+              <source media="(max-width: 768px)" srcSet="/assets/img-community-sm.png" type="image/png" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-community.webp" type="image/webp" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-community.png" type="image/png" />
               <img src="/assets/img-community.png" alt="" className="w-full h-full object-cover" />
             </picture>
           </div>
@@ -213,6 +223,8 @@ export default function Home() {
       <footer className="bg-[#757BA3] py-5">
         <div className="w-full aspect-[3085/812] relative overflow-hidden">
           <picture>
+            <source media="(max-width: 768px)" srcSet="/assets/img-logo-pattern-sm.png" type="image/png" />
+            <source media="(min-width: 769px)" srcSet="/assets/img-logo-pattern.png" type="image/png" />
             <img 
               src="/assets/img-logo-pattern.png" 
               alt="Detailed EVRO logo."
