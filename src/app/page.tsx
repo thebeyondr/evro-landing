@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
     <div className="break-words tracking-tighter">
-      <div className="relative px-1 md:px-4">
+      <div className="relative px-3 md:px-4">
         <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
           <picture>
             {/* Mobile */}
@@ -21,10 +21,10 @@ export default function Home() {
             {/* Wide */}
             <source media="(min-width: 2049px)" srcSet="/assets/img-hero-xl.webp" type="image/webp" />
             <source media="(min-width: 2049px)" srcSet="/assets/img-hero-xl.png" type="image/png" />
-            <img src="/assets/img-hero-xl.png" alt="" className="w-full h-full object-cover" />
+            <img src="/assets/img-hero-xl.png" alt="" className="w-full h-full" />
           </picture>
         </div>
-        <header className="py-7 sm:px-8">
+        <header className="py-7">
           <div className="flex items-center justify-between px-3 md:px-4">
             <div className="flex items-center">
               <Link href="/">
@@ -49,7 +49,7 @@ export default function Home() {
         </header>
         <section className="py-8 pb-30">
           <div>
-            <h1 className="text-6xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight pr-3">
+            <h1 className="text-5xl sm:text-7xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight pr-3">
               AUTONOMOUS,
               OPEN SOURCE,
               VALUE.
@@ -63,7 +63,7 @@ export default function Home() {
               or intermediaries.
             </p>
             <br/>
-            <div className="justify-center flex -mb-10 -mt-4">
+            <div className="justify-center sm:justify-start sm:ml-2 flex -mb-10 -mt-4">
               <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 px-10 md:w-100 flex items-center justify-center">
                 <b className="tracking-[-0.2em] text-2xl">GET ON EVRO</b>
                 <ArrowRight className="w-6 h-6 ml-2" />
@@ -73,8 +73,8 @@ export default function Home() {
         </section>
       </div>
       <main>
-        <section className="py-22 sm:px-8 relative">
-          <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 250px)' }}>
+        <section className=" sm:px-8 relative">
+          <div className="absolute inset-0 -z-10">
             <picture>
               {/* Mobile */}
               <source media="(max-width: 768px)" srcSet="/assets/img-motivation-sm.webp" type="image/webp" />
@@ -88,21 +88,21 @@ export default function Home() {
               {/* Wide */}
               <source media="(min-width: 2049px)" srcSet="/assets/img-motivation-xl.webp" type="image/webp" />
               <source media="(min-width: 2049px)" srcSet="/assets/img-motivation-xl.png" type="image/png" />
-              <img src="/assets/img-motivation-xl.png" alt="" className="w-full h-full object-cover" />
+              <img src="/assets/img-motivation-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
-          <div className="md:grid md:grid-cols-2 md:mb-28 gap-16 space-y-16 mt-32 px-4">
+          <div className="md:grid md:grid-cols-2 sm:mx-10 gap-16 mt-10 px-4">
             <div>
-              <h2 className="text-3xl font-bold tracking-[-0.2em]">
+              <h2 className="text-3xl sm:text-2xl font-bold tracking-[-0.2em] sm:mt-30">
                 <b>EVRO EXISTS FOR BUILDERS, SAVERS, AND PROTOCOLS THAT RELY ON AUTONOMOUS LIQUIDITY.</b>
               </h2>
             </div>
-            <div>
-              <p className="text-3xl font-thin tracking-wide pb-8">
+            <div className="text-3xl sm:text-2xl font-thin tracking-wide mt-18">
+              <p className="mb-8">
                 By aligning incentives among vault creators, liquidators, and integrators,
                 the system sustains value stability through transparent, trustless automation.
               </p>
-              <p className="text-3xl font-thin tracking-wide">
+              <p>
                 Decentralized design ensures that once deployed, the protocol operates independently.
                 EVRO is governed by code, not counterparties.
               </p>
@@ -124,7 +124,7 @@ export default function Home() {
               {/* Wide */}
               <source media="(min-width: 2049px)" srcSet="/assets/img-stats-xl.webp" type="image/webp" />
               <source media="(min-width: 2049px)" srcSet="/assets/img-stats-xl.png" type="image/png" />
-              <img src="/assets/img-stats-xl.png" alt="" className="w-full h-full object-cover" />
+              <img src="/assets/img-stats-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
           <div className="mx-auto">
@@ -144,7 +144,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="pt-16 md:py-24 relative bottom-20 md:bottom-6">
+        <section className="pt-24 pb-10 md:py-24 relative bottom-20 md:bottom-6">
           <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 150px)' }}>
             <picture>
               {/* Mobile */}
@@ -159,7 +159,7 @@ export default function Home() {
               {/* Wide */}
               <source media="(min-width: 2049px)" srcSet="/assets/img-corefeature-xl.webp" type="image/webp" />
               <source media="(min-width: 2049px)" srcSet="/assets/img-corefeature-xl.png" type="image/png" />
-              <img src="/assets/img-corefeature-xl.png" alt="" className="w-full h-full object-cover" />
+              <img src="/assets/img-corefeature-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
           <div className="mx-auto px-5 py-28 pb-10">
@@ -169,7 +169,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative md:mb-50">
               {/* Stability Pools - Top Left */}
               <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:p-10 md:pt-40">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
+                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-10">
                   Stability Pools
                 </h3>
                 <p className="text-3xl font-extralight">
@@ -180,7 +180,7 @@ export default function Home() {
               
               {/* Multi-Collateral Mechanism - Top Right */}
               <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:p-10 md:translate-y-52 md:pt-20">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-20">
+                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-10">
                   Multi-Collateral Mechanism
                 </h3>
                 <p className="text-3xl font-extralight">
@@ -229,7 +229,7 @@ export default function Home() {
               {/* Wide */}
               <source media="(min-width: 2049px)" srcSet="/assets/img-community-xl.webp" type="image/webp" />
               <source media="(min-width: 2049px)" srcSet="/assets/img-community-xl.png" type="image/png" />
-              <img src="/assets/img-community-xl.png" alt="" className="w-full h-full object-cover" />
+              <img src="/assets/img-community-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
           <div className="max-w-7xl mx-auto px-5">
@@ -270,7 +270,7 @@ export default function Home() {
             <img 
               src="/assets/img-logo-pattern-xl.png" 
               alt="Detailed EVRO logo."
-              className="w-full h-full object-cover scale-x-107 mix-blend-luminosity"
+              className="w-full h-full scale-x-107 mix-blend-luminosity"
             />
           </picture>
         </div>
