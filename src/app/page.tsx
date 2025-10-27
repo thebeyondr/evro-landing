@@ -73,7 +73,7 @@ export default function Home() {
         </section>
       </div>
       <main>
-        <section className=" sm:px-8 relative">
+        <section className="py-22 sm:pb-55 sm:px-8 relative">
           <div className="absolute inset-0 -z-10">
             <picture>
               {/* Mobile */}
@@ -91,9 +91,9 @@ export default function Home() {
               <img src="/assets/img-motivation-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
-          <div className="md:grid md:grid-cols-2 sm:mx-10 gap-16 mt-10 px-4">
+          <div className="md:grid md:grid-cols-2 sm:ml-20 gap-16 mt-10 px-4 sm:r-10">
             <div>
-              <h2 className="text-3xl sm:text-2xl font-bold tracking-[-0.2em] sm:mt-30">
+              <h2 className="text-3xl font-bold tracking-[-0.2em] sm:mt-30">
                 <b>EVRO EXISTS FOR BUILDERS, SAVERS, AND PROTOCOLS THAT RELY ON AUTONOMOUS LIQUIDITY.</b>
               </h2>
             </div>
@@ -109,7 +109,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="px-2 sm:px-8 text-white relative py-32">
+        <section className="px-2 sm:px-8 text-white relative py-32 -mt-13">
           <div className="absolute inset-0 -z-10 pt-5" style={{ height: 'calc(100% + 50px)' }}>
             <picture>
               {/* Mobile */}
