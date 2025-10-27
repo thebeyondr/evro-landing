@@ -72,7 +72,6 @@ export default function Home() {
               alt=""
               fill
               priority
-              className="object-cover"
             />
           </div>
           <div className="md:grid md:grid-cols-2 md:mb-28 gap-16 space-y-16 mt-32 px-4">
@@ -100,7 +99,6 @@ export default function Home() {
               alt=""
               fill
               loading="lazy"
-              className="object-cover"
             />
           </div>
           <div className="mx-auto">
