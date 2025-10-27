@@ -8,13 +8,11 @@ export default function Home() {
     <div className="break-words tracking-tighter">
       <div className="relative px-1 md:px-4">
         <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
-          <Image 
-            src="/assets/img-hero.png" 
-            alt=""
-            fill
-            quality={75}
-            priority
-          />
+          <picture>
+            <source media="(max-width: 768px)" srcSet="/assets/img-hero-sm.png" />
+            <source media="(min-width: 769px)" srcSet="/assets/img-hero.png" />
+            <img src="/assets/img-hero.png" alt="" className="w-full h-full object-cover" />
+          </picture>
         </div>
         <header className="py-7 sm:px-8">
           <div className="flex items-center justify-between px-3 md:px-4">
@@ -67,12 +65,11 @@ export default function Home() {
       <main>
         <section className="pt-22 sm:px-8 relative">
           <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 250px)' }}>
-            <Image 
-              src="/assets/img-motivation.png" 
-              alt=""
-              fill
-              priority
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/assets/img-motivation-sm.png" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-motivation.png" />
+              <img src="/assets/img-motivation.png" alt="" className="w-full h-full object-cover" />
+            </picture>
           </div>
           <div className="md:grid md:grid-cols-2 md:mb-28 gap-16 space-y-16 mt-32 px-4">
             <div>
@@ -94,12 +91,11 @@ export default function Home() {
         </section>
         <section className="py-20 px-2 sm:px-8 text-white relative py-32">
           <div className="absolute inset-0 -z-10 -my-6" style={{ height: 'calc(100% + 100px)' }}>
-            <Image 
-              src="/assets/img-stats.png" 
-              alt=""
-              fill
-              loading="lazy"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/assets/img-stats-sm.png" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-stats.png" />
+              <img src="/assets/img-stats.png" alt="" className="w-full h-full object-cover" />
+            </picture>
           </div>
           <div className="mx-auto">
             <div className="md:grid md:grid-cols-3 gap-10 md:gap-52 md:px-22 justify-items-center">
@@ -120,13 +116,11 @@ export default function Home() {
         </section>
         <section className="pt-16 md:py-24 relative bottom-20 md:bottom-6">
           <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 150px)' }}>
-            <Image 
-              src="/assets/img-corefeature.png" 
-              alt=""
-              fill
-              className="object-cover"
-              loading="lazy"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/assets/img-corefeature-sm.png" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-corefeature.png" />
+              <img src="/assets/img-corefeature.png" alt="" className="w-full h-full object-cover" />
+            </picture>
           </div>
           <div className="mx-auto px-5 py-28 pb-10">
             <h2 className="tracking-[-0.2em] text-6xl md:text-7xl font-extrabold text-center mb-16">
@@ -182,13 +176,11 @@ export default function Home() {
         </section>
         <section className="py-6 pt-2 -mt-4 relative pb-12">
           <div className="absolute inset-0 -z-10">
-            <Image 
-              src="/assets/img-community.png" 
-              alt=""
-              fill
-              className="object-cover"
-              loading="lazy"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/assets/img-community-sm.png" />
+              <source media="(min-width: 769px)" srcSet="/assets/img-community.png" />
+              <img src="/assets/img-community.png" alt="" className="w-full h-full object-cover" />
+            </picture>
           </div>
           <div className="max-w-7xl mx-auto px-5">
             <div className="text-center md:px-25">
@@ -220,13 +212,13 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#757BA3] py-5">
         <div className="w-full aspect-[3085/812] relative overflow-hidden">
-          <Image 
-            src="/assets/img-logo-pattern.png" 
-            alt="Detailed EVRO logo."
-            fill
-            loading="lazy"
-            className="object-cover scale-x-107 mix-blend-luminosity"
-          />
+          <picture>
+            <img 
+              src="/assets/img-logo-pattern.png" 
+              alt="Detailed EVRO logo."
+              className="w-full h-full object-cover scale-x-107 mix-blend-luminosity"
+            />
+          </picture>
         </div>
         <div className="text-center mx-auto px-2 py-8 md:px-25 lg:px-20">
             <p className="font-light text-2xl text-gray-600 mt-5">
