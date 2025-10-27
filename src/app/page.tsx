@@ -9,11 +9,19 @@ export default function Home() {
       <div className="relative px-1 md:px-4">
         <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
           <picture>
+            {/* Mobile */}
             <source media="(max-width: 768px)" srcSet="/assets/img-hero-sm.webp" type="image/webp" />
             <source media="(max-width: 768px)" srcSet="/assets/img-hero-sm.png" type="image/png" />
-            <source media="(min-width: 769px)" srcSet="/assets/img-hero.webp" type="image/webp" />
-            <source media="(min-width: 769px)" srcSet="/assets/img-hero.png" type="image/png" />
-            <img src="/assets/img-hero.png" alt="" className="w-full h-full object-cover" />
+            {/* Tablet */}
+            <source media="(max-width: 1366px)" srcSet="/assets/img-hero-md.webp" type="image/webp" />
+            <source media="(max-width: 1366px)" srcSet="/assets/img-hero-md.png" type="image/png" />
+            {/* Desktop */}
+            <source media="(max-width: 2048px)" srcSet="/assets/img-hero-lg.webp" type="image/webp" />
+            <source media="(max-width: 2048px)" srcSet="/assets/img-hero-lg.png" type="image/png" />
+            {/* Wide */}
+            <source media="(min-width: 2049px)" srcSet="/assets/img-hero-xl.webp" type="image/webp" />
+            <source media="(min-width: 2049px)" srcSet="/assets/img-hero-xl.png" type="image/png" />
+            <img src="/assets/img-hero-xl.png" alt="" className="w-full h-full object-cover" />
           </picture>
         </div>
         <header className="py-7 sm:px-8">
@@ -68,11 +76,19 @@ export default function Home() {
         <section className="py-22 sm:px-8 relative">
           <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 250px)' }}>
             <picture>
+              {/* Mobile */}
               <source media="(max-width: 768px)" srcSet="/assets/img-motivation-sm.webp" type="image/webp" />
               <source media="(max-width: 768px)" srcSet="/assets/img-motivation-sm.png" type="image/png" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-motivation.webp" type="image/webp" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-motivation.png" type="image/png" />
-              <img src="/assets/img-motivation.png" alt="" className="w-full h-full object-cover" />
+              {/* Tablet */}
+              <source media="(max-width: 1366px)" srcSet="/assets/img-motivation-md.webp" type="image/webp" />
+              <source media="(max-width: 1366px)" srcSet="/assets/img-motivation-md.png" type="image/png" />
+              {/* Desktop */}
+              <source media="(max-width: 2048px)" srcSet="/assets/img-motivation-lg.webp" type="image/webp" />
+              <source media="(max-width: 2048px)" srcSet="/assets/img-motivation-lg.png" type="image/png" />
+              {/* Wide */}
+              <source media="(min-width: 2049px)" srcSet="/assets/img-motivation-xl.webp" type="image/webp" />
+              <source media="(min-width: 2049px)" srcSet="/assets/img-motivation-xl.png" type="image/png" />
+              <img src="/assets/img-motivation-xl.png" alt="" className="w-full h-full object-cover" />
             </picture>
           </div>
           <div className="md:grid md:grid-cols-2 md:mb-28 gap-16 space-y-16 mt-32 px-4">
@@ -96,11 +112,19 @@ export default function Home() {
         <section className="px-2 sm:px-8 text-white relative py-32">
           <div className="absolute inset-0 -z-10 pt-5" style={{ height: 'calc(100% + 50px)' }}>
             <picture>
+              {/* Mobile */}
               <source media="(max-width: 768px)" srcSet="/assets/img-stats-sm.webp" type="image/webp" />
               <source media="(max-width: 768px)" srcSet="/assets/img-stats-sm.png" type="image/png" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-stats.webp" type="image/webp" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-stats.png" type="image/png" />
-              <img src="/assets/img-stats.png" alt="" className="w-full h-full object-cover" />
+              {/* Tablet */}
+              <source media="(max-width: 1366px)" srcSet="/assets/img-stats-md.webp" type="image/webp" />
+              <source media="(max-width: 1366px)" srcSet="/assets/img-stats-md.png" type="image/png" />
+              {/* Desktop */}
+              <source media="(max-width: 2048px)" srcSet="/assets/img-stats-lg.webp" type="image/webp" />
+              <source media="(max-width: 2048px)" srcSet="/assets/img-stats-lg.png" type="image/png" />
+              {/* Wide */}
+              <source media="(min-width: 2049px)" srcSet="/assets/img-stats-xl.webp" type="image/webp" />
+              <source media="(min-width: 2049px)" srcSet="/assets/img-stats-xl.png" type="image/png" />
+              <img src="/assets/img-stats-xl.png" alt="" className="w-full h-full object-cover" />
             </picture>
           </div>
           <div className="mx-auto">
@@ -123,11 +147,19 @@ export default function Home() {
         <section className="pt-16 md:py-24 relative bottom-20 md:bottom-6">
           <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 150px)' }}>
             <picture>
+              {/* Mobile */}
               <source media="(max-width: 768px)" srcSet="/assets/img-corefeature-sm.webp" type="image/webp" />
               <source media="(max-width: 768px)" srcSet="/assets/img-corefeature-sm.png" type="image/png" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-corefeature.webp" type="image/webp" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-corefeature.png" type="image/png" />
-              <img src="/assets/img-corefeature.png" alt="" className="w-full h-full object-cover" />
+              {/* Tablet */}
+              <source media="(max-width: 1366px)" srcSet="/assets/img-corefeature-md.webp" type="image/webp" />
+              <source media="(max-width: 1366px)" srcSet="/assets/img-corefeature-md.png" type="image/png" />
+              {/* Desktop */}
+              <source media="(max-width: 2048px)" srcSet="/assets/img-corefeature-lg.webp" type="image/webp" />
+              <source media="(max-width: 2048px)" srcSet="/assets/img-corefeature-lg.png" type="image/png" />
+              {/* Wide */}
+              <source media="(min-width: 2049px)" srcSet="/assets/img-corefeature-xl.webp" type="image/webp" />
+              <source media="(min-width: 2049px)" srcSet="/assets/img-corefeature-xl.png" type="image/png" />
+              <img src="/assets/img-corefeature-xl.png" alt="" className="w-full h-full object-cover" />
             </picture>
           </div>
           <div className="mx-auto px-5 py-28 pb-10">
@@ -185,11 +217,19 @@ export default function Home() {
         <section className="py-6 pt-2 -mt-4 relative pb-12">
           <div className="absolute inset-0 -z-10">
             <picture>
+              {/* Mobile */}
               <source media="(max-width: 768px)" srcSet="/assets/img-community-sm.webp" type="image/webp" />
               <source media="(max-width: 768px)" srcSet="/assets/img-community-sm.png" type="image/png" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-community.webp" type="image/webp" />
-              <source media="(min-width: 769px)" srcSet="/assets/img-community.png" type="image/png" />
-              <img src="/assets/img-community.png" alt="" className="w-full h-full object-cover" />
+              {/* Tablet */}
+              <source media="(max-width: 1366px)" srcSet="/assets/img-community-md.webp" type="image/webp" />
+              <source media="(max-width: 1366px)" srcSet="/assets/img-community-md.png" type="image/png" />
+              {/* Desktop */}
+              <source media="(max-width: 2048px)" srcSet="/assets/img-community-lg.webp" type="image/webp" />
+              <source media="(max-width: 2048px)" srcSet="/assets/img-community-lg.png" type="image/png" />
+              {/* Wide */}
+              <source media="(min-width: 2049px)" srcSet="/assets/img-community-xl.webp" type="image/webp" />
+              <source media="(min-width: 2049px)" srcSet="/assets/img-community-xl.png" type="image/png" />
+              <img src="/assets/img-community-xl.png" alt="" className="w-full h-full object-cover" />
             </picture>
           </div>
           <div className="max-w-7xl mx-auto px-5">
@@ -224,9 +264,11 @@ export default function Home() {
         <div className="w-full aspect-[3085/812] relative overflow-hidden">
           <picture>
             <source media="(max-width: 768px)" srcSet="/assets/img-logo-pattern-sm.png" type="image/png" />
-            <source media="(min-width: 769px)" srcSet="/assets/img-logo-pattern.png" type="image/png" />
+            <source media="(max-width: 1366px)" srcSet="/assets/img-logo-pattern-md.png" type="image/png" />
+            <source media="(max-width: 2048px)" srcSet="/assets/img-logo-pattern-lg.png" type="image/png" />
+            <source media="(min-width: 2049px)" srcSet="/assets/img-logo-pattern-xl.png" type="image/png" />
             <img 
-              src="/assets/img-logo-pattern.png" 
+              src="/assets/img-logo-pattern-xl.png" 
               alt="Detailed EVRO logo."
               className="w-full h-full object-cover scale-x-107 mix-blend-luminosity"
             />
