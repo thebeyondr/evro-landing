@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
     <div className="break-words tracking-tighter">
-      <div className="relative">
+      <div className="relative px-1 md:px-4">
         <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
           <Image 
             src="/assets/img-hero.png" 
@@ -16,8 +16,8 @@ export default function Home() {
             priority
           />
         </div>
-        <header className="py-7 px-4 sm:px-8">
-          <div className="flex items-center justify-between">
+        <header className="py-7 sm:px-8">
+          <div className="flex items-center justify-between px-3 md:px-4">
             <div className="flex items-center">
               <Link href="/">
                 <Image 
@@ -225,7 +225,7 @@ export default function Home() {
             alt="Detailed EVRO logo."
             fill
             loading="lazy"
-            className="object-cover scale-x-107"
+            className="object-cover scale-x-107 mix-blend-luminosity"
           />
         </div>
         <div className="text-center mx-auto px-2 py-8 md:px-25 lg:px-20">
