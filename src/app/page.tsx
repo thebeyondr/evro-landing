@@ -23,6 +23,15 @@ export default function Home() {
             <source media="(min-width: 2049px)" srcSet="/assets/img-hero-xl.png" type="image/png" />
             <img src="/assets/img-hero-xl.png" alt="" className="w-full h-full" />
           </picture>
+           <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="hidden 2xl:block absolute top-0 right-0 h-full h-auto"
+          >
+            <source src="/assets/looptrim.webm" type="video/webm" />
+          </video>
         </div>
         <header className="py-7">
           <div className="flex items-center justify-between px-3 md:px-4">

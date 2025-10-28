@@ -25,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preload" as="image" href="/assets/img-hero.png" />
         <link rel="preload" as="image" href="/assets/Evro-Logo-wordmark.svg" />
       </head>
       <body
