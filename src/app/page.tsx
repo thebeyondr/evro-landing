@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
     <div className="break-words tracking-tighter">
-      <div className="relative px-3 md:px-4">
+      <div className="relative px-3 md:px-4 lg:px-6">
         <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
           <picture>
             {/* Mobile */}
@@ -47,14 +47,14 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <section className="py-8 pb-30">
+        <section className="py-8 pb-30 lg:text-left xl:pr-[25%]">
           <div>
             <h1 className="text-5xl sm:text-7xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight pr-3">
               AUTONOMOUS,
               OPEN SOURCE,
               VALUE.
             </h1>
-            <p className="px-2 text-3xl font-extralight mb-10">
+            <p className="px-2 text-3xl xl:text-5xl font-extralight mb-10 xl:pr-[50%]">
               <b>EVRO</b> stands for <b>EVOLUTIONARY RESONATING ORGANISM</b>. 
               An open-source protocol that maintains synthetic value units through
               fully decentralized smart-contract mechanics. Built on Liquity V2 principles
@@ -64,8 +64,8 @@ export default function Home() {
             </p>
             <br/>
             <div className="justify-center sm:justify-start sm:ml-2 flex -mb-10 -mt-4">
-              <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 px-10 md:w-100 flex items-center justify-center">
-                <b className="tracking-[-0.2em] text-2xl">GET ON EVRO</b>
+              <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 xl:p-6 px-10 md:w-100 xl:w-150 flex items-center justify-center">
+                <b className="tracking-[-0.2em] text-2xl md:text-3xl xl:text-4xl">GET ON EVRO</b>
                 <ArrowRight className="w-6 h-6 ml-2" />
               </button>
             </div>
@@ -73,7 +73,7 @@ export default function Home() {
         </section>
       </div>
       <main>
-        <section className="py-22 sm:pb-55 sm:px-8 relative">
+        <section className="py-22 sm:pb-55 sm:px-8 md:-bottom-7 relative">
           <div className="absolute inset-0 -z-10">
             <picture>
               {/* Mobile */}
@@ -91,13 +91,13 @@ export default function Home() {
               <img src="/assets/img-motivation-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
-          <div className="md:grid md:grid-cols-2 sm:ml-20 gap-16 mt-10 px-4 sm:r-10">
+          <div className="md:grid md:grid-cols-2 sm:mx-20 gap-16 mt-10 px-4 sm:r-10">
             <div>
-              <h2 className="text-3xl font-bold tracking-[-0.2em] sm:mt-30">
+              <h2 className="text-3xl xl:text-5xl font-bold tracking-[-0.2em] sm:mt-30">
                 <b>EVRO EXISTS FOR BUILDERS, SAVERS, AND PROTOCOLS THAT RELY ON AUTONOMOUS LIQUIDITY.</b>
               </h2>
             </div>
-            <div className="text-3xl sm:text-2xl font-thin tracking-wide mt-18">
+            <div className="text-3xl sm:text-2xl xl:text-4xl font-thin tracking-wide mt-18">
               <p className="mb-8">
                 By aligning incentives among vault creators, liquidators, and integrators,
                 the system sustains value stability through transparent, trustless automation.
@@ -109,7 +109,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="px-2 sm:px-8 text-white relative py-32 -mt-13">
+        <section className="px-2 sm:px-8 text-white relative py-32 -mt-13 sm:-mt-36 sm:py-65">
           <div className="absolute inset-0 -z-10 pt-5" style={{ height: 'calc(100% + 50px)' }}>
             <picture>
               {/* Mobile */}
@@ -128,23 +128,23 @@ export default function Home() {
             </picture>
           </div>
           <div className="mx-auto">
-            <div className="md:grid md:grid-cols-3 gap-10 md:gap-52 md:px-22 justify-items-center">
-              <div className="text-center mb-36 md:mb-0">
-                <div className="text-5xl font-extrabold my-8 tracking-[-0.2em]">1.2M</div>
-                <div className="text-3xl md:text-lg">CONTRACT COLLATERAL</div>
+            <div className="md:grid md:grid-cols-3 gap-10 sm:gap-52 sm:px-22 justify-items-center sm:mt-2">
+              <div className="text-center mb-36 sm:mb-0">
+                <div className="text-5xl sm:text-6xl font-extrabold my-8 tracking-[-0.2em]">1.2M</div>
+                <div className="text-3xl sm:text-xl">CONTRACT COLLATERAL</div>
               </div>
               <div className="text-center mb-36 md:mb-0">
-                <div className="text-5xl font-extrabold my-8 tracking-[-0.2em]">8.7K</div>
-                <div className="text-3xl md:text-lg">OPERATIONS EXECUTED</div>
+                <div className="text-5xl sm:text-6xl font-extrabold my-8 tracking-[-0.2em]">8.7K</div>
+                <div className="text-3xl sm:text-xl">OPERATIONS EXECUTED</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-extrabold my-8 tracking-[-0.2em]">75%</div>
-                <div className="text-3xl md:text-lg">COLLATERAL RATIO</div>
+                <div className="text-5xl sm:text-6xl font-extrabold my-8 tracking-[-0.2em]">75%</div>
+                <div className="text-3xl sm:text-xl">COLLATERAL RATIO</div>
               </div>
             </div>
           </div>
         </section>
-        <section className="pt-24 pb-10 md:py-24 relative bottom-20 md:bottom-6">
+        <section className="pt-24 pb-10 sm:py-24 relative bottom-20">
           <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 150px)' }}>
             <picture>
               {/* Mobile */}
