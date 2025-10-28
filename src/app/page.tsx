@@ -33,7 +33,7 @@ export default function Home() {
                   height={40} 
                   width={150} 
                   alt="Evro Logo" 
-                  className="w-38 h-auto"
+                  className="w-38 xl:w-50 h-auto"
                   priority
                 />
               </Link>
@@ -41,7 +41,7 @@ export default function Home() {
             <div className="flex items-center gap-6">
               <button>
                 <Link href="https://github.com/evro-finance" target="_blank" rel="noopener noreferrer">
-                  <FaGithub className="w-10 h-10 md:text-[#F5889B]" />
+                  <FaGithub className="w-10 h-10 xl:w-15 xl:h-15 md:text-[#F5889B]" />
                 </Link>
               </button>
             </div>
@@ -63,9 +63,9 @@ export default function Home() {
               or intermediaries.
             </p>
             <br/>
-            <div className="justify-center sm:justify-start sm:ml-2 flex -mb-10 -mt-4">
+            <div className="justify-center sm:justify-start sm:ml-2 flex -mb-10 -mt-4 xl:mt-2">
               <button className="hover:-translate-y-2 transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 xl:p-6 px-10 md:w-100 xl:w-150 flex items-center justify-center">
-                <b className="tracking-[-0.2em] text-2xl md:text-3xl xl:text-4xl">GET ON EVRO</b>
+                <b className="tracking-[-0.2em] text-2xl md:text-3xl xl:text-4xl xl:py-2">GET ON EVRO</b>
                 <ArrowRight className="w-6 h-6 ml-2" />
               </button>
             </div>
