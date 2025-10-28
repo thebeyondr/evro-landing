@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="break-words tracking-tighter">
       <div className="relative px-3 md:px-4 lg:px-6">
-        <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 200px)' }}>
+        <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 260px)' }}>
           <picture>
             {/* Mobile */}
             <source media="(max-width: 768px)" srcSet="/assets/img-hero-sm.webp" type="image/webp" />
@@ -73,7 +73,7 @@ export default function Home() {
         </section>
       </div>
       <main>
-        <section className="py-22 sm:pb-55 sm:px-8 md:-bottom-7 relative">
+        <section className="py-22 sm:pb-55 sm:px-8 md:-bottom-7 relative xl:-bottom-13">
           <div className="absolute inset-0 -z-10">
             <picture>
               {/* Mobile */}
@@ -91,13 +91,13 @@ export default function Home() {
               <img src="/assets/img-motivation-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
-          <div className="md:grid md:grid-cols-2 sm:mx-20 gap-16 mt-10 px-4 sm:r-10">
+          <div className="md:grid md:grid-cols-2 sm:mx-20 gap-16 mt-10 px-4 sm:r-10 xl:px-[3%] xl:items-center">
             <div>
-              <h2 className="text-3xl xl:text-5xl font-bold tracking-[-0.2em] sm:mt-30">
+              <h2 className="text-3xl xl:text-5xl font-bold tracking-[-0.2em] sm:mt-30 xl:px-10">
                 <b>EVRO EXISTS FOR BUILDERS, SAVERS, AND PROTOCOLS THAT RELY ON AUTONOMOUS LIQUIDITY.</b>
               </h2>
             </div>
-            <div className="text-3xl sm:text-2xl xl:text-4xl font-thin tracking-wide mt-18">
+            <div className="text-3xl sm:text-2xl xl:text-4xl font-thin tracking-wide mt-18 xl:px-10">
               <p className="mb-8">
                 By aligning incentives among vault creators, liquidators, and integrators,
                 the system sustains value stability through transparent, trustless automation.
@@ -127,18 +127,18 @@ export default function Home() {
               <img src="/assets/img-stats-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
-          <div className="mx-auto">
+          <div className="mx-auto xl:mx-[20%]">
             <div className="md:grid md:grid-cols-3 gap-10 sm:gap-52 sm:px-22 justify-items-center sm:mt-2">
               <div className="text-center mb-36 sm:mb-0">
-                <div className="text-5xl sm:text-6xl font-extrabold my-8 tracking-[-0.2em]">1.2M</div>
+                <div className="text-5xl sm:text-6xl xl:text-7xl font-extrabold my-8 tracking-[-0.2em]">1.2M</div>
                 <div className="text-3xl sm:text-xl">CONTRACT COLLATERAL</div>
               </div>
               <div className="text-center mb-36 md:mb-0">
-                <div className="text-5xl sm:text-6xl font-extrabold my-8 tracking-[-0.2em]">8.7K</div>
+                <div className="text-5xl sm:text-6xl xl:text-7xl font-extrabold my-8 tracking-[-0.2em]">8.7K</div>
                 <div className="text-3xl sm:text-xl">OPERATIONS EXECUTED</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl sm:text-6xl font-extrabold my-8 tracking-[-0.2em]">75%</div>
+                <div className="text-5xl sm:text-6xl xl:text-7xl font-extrabold my-8 tracking-[-0.2em]">75%</div>
                 <div className="text-3xl sm:text-xl">COLLATERAL RATIO</div>
               </div>
             </div>
@@ -163,49 +163,49 @@ export default function Home() {
             </picture>
           </div>
           <div className="mx-auto px-5 py-28 pb-10">
-            <h2 className="tracking-[-0.2em] text-6xl md:text-7xl font-extrabold text-center mb-16">
+            <h2 className="tracking-[-0.2em] text-6xl md:text-7xl xl:text-8xl font-extrabold text-center mb-16 xl:mb-30">
               CORE FEATURES
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative md:mb-50">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-10 relative xl:px-[5%] xl:pb-[5%]">
               {/* Stability Pools - Top Left */}
-              <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:p-10 md:pt-40">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-10">
+              <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:p-10 md:pt-40 xl:pb-20 xl:ml-[50%] xl:pt-50">
+                <h3 className="text-4xl xl:text-5xl font-extrabold tracking-[-0.2em] mb-8 mt-10">
                   Stability Pools
                 </h3>
-                <p className="text-3xl font-extralight">
+                <p className="text-3xl xl:text-4xl font-extralight">
                   Autonomous pools distribute collateral proceeds according to deterministic
                   smart contract rules. No discretionary control or managed yield.
                 </p>
               </div>
               
               {/* Multi-Collateral Mechanism - Top Right */}
-              <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:p-10 md:translate-y-52 md:pt-20">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-10">
+              <div className="bg-[#ECF2E8BF] p-3 py-15 my-1 md:my-0 md:p-10 md:translate-y-52 md:pt-20 xl:mr-[50%] xl:pt-50">
+                <h3 className="text-4xl xl:text-5xl font-extrabold tracking-[-0.2em] mb-8 mt-10">
                   Multi-Collateral Mechanism
                 </h3>
-                <p className="text-3xl font-extralight">
+                <p className="text-3xl xl:text-4xl font-extralight">
                   Vaults automatically generate synthetic value units backed by digital collateral.
                   All parameters are enforced on-chain and transparent to every participant.
                 </p>
               </div>
               
               {/* Seamless Integration - Middle Left */}
-              <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1 md:my-0 md:pt-1 md:p-10 md:translate-y-0">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
+              <div className="bg-[#ECF2E8BF] p-3 pb-30 my-1 md:my-0 md:pt-1 md:p-10 md:translate-y-0 xl:ml-[50%] xl:pb-[15%]">
+                <h3 className="text-4xl xl:text-5xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
                   Seamless Integration
                 </h3>
-                <p className="text-3xl font-extralight">
+                <p className="text-3xl xl:text-4xl font-extralight">
                   Designed for composability — wallets, interfaces, and DeFi tools
                   can interact with EVRO contracts directly through permissionless endpoints.
                 </p>
               </div>
               
               {/* Immutable Protocol - Bottom Right */}
-              <div className="bg-[#ECF2E8BF] p-3 pb-30 md:pb-40 md:pt-1 my-1 md:my-0 md:p-10 md:translate-y-52">
-                <h3 className="text-4xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
+              <div className="bg-[#ECF2E8BF] p-3 pb-30 md:pb-40 md:pt-1 my-1 md:my-0 md:p-10 md:translate-y-52 xl:mr-[50%] xl:pt-5">
+                <h3 className="text-4xl xl:text-5xl font-extrabold tracking-[-0.2em] mb-8 mt-14">
                   Immutable Protocol
                 </h3>
-                <p className="text-3xl font-extralight">
+                <p className="text-3xl xl:text-4xl font-extralight">
                   EVRO's contracts operate without administrative control or upgrade authority. The
                   immutability of the protocol is a foundational primitive that digital economies can
                   rely on for predictable, censorship-resistant liquidity.
