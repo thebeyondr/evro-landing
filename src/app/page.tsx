@@ -58,12 +58,12 @@ export default function Home() {
         </header>
         <section className="py-8 pb-30 lg:text-left xl:pr-[25%]">
           <div>
-            <h1 className="text-5xl sm:text-7xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight pr-3">
+            <h1 className="text-5xl sm:text-7xl xl:text-8xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight pr-3 2xl:pr-[25%]">
               AUTONOMOUS,
               OPEN SOURCE,
               VALUE.
             </h1>
-            <p className="px-2 text-3xl xl:text-5xl font-extralight mb-10 xl:pr-[50%]">
+            <p className="px-2 text-3xl xl:text-4xl font-extralight mb-10 xl:pr-[50%]">
               <b>EVRO</b> stands for <b>EVOLUTIONARY RESONATING ORGANISM</b>. 
               An open-source protocol that maintains synthetic value units through
               fully decentralized smart-contract mechanics. Built on Liquity V2 principles
@@ -100,7 +100,7 @@ export default function Home() {
               <img src="/assets/img-motivation-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
-          <div className="md:grid md:grid-cols-2 sm:mx-20 gap-16 mt-10 px-4 sm:r-10 xl:px-[3%] xl:items-center">
+          <div className="md:grid md:grid-cols-2 sm:mx-20 gap-16 mt-10 px-4 sm:r-10 lg:px-[3%] 2xl:px-[10%] xl:items-center">
             <div>
               <h2 className="text-3xl xl:text-5xl font-bold tracking-[-0.2em] sm:mt-30 xl:px-10">
                 <b>EVRO EXISTS FOR BUILDERS, SAVERS, AND PROTOCOLS THAT RELY ON AUTONOMOUS LIQUIDITY.</b>

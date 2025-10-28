@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
   compress: true,
-  swcMinify: true,
   experimental: {
     optimizePackageImports: ['lucide-react', 'react-icons'],
   },
