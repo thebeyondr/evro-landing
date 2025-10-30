@@ -13,17 +13,17 @@ const lexendZetta = Lexend_Zetta({
 });
 
 export const metadata: Metadata = {
-  title: "EVRO ",
+  title: "EVRO",
   description: "An open-source protocol that maintains synthetic value units through fully decentralized smart-contract mechanics.",
   openGraph: {
     title: "EVRO",
     description: "An open-source protocol that maintains synthetic value units through fully decentralized smart-contract mechanics.",
     images: [
       {
-        url: "/assets/img-logo-pattern-sm.png",
+        url: "/assets/og-image.png",
         width: 1200,
         height: 630,
-        alt: "EVRO Logo Pattern",
+        alt: "EVRO",
       },
     ],
     type: "website",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EVRO",
     description: "An open-source protocol that maintains synthetic value units through fully decentralized smart-contract mechanics.",
-    images: ["/assets/img-logo-pattern-sm.png"],
+    images: ["/assets/og-image.png"],
   },
 };
 
