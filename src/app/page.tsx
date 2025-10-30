@@ -60,12 +60,12 @@ export default function Home() {
           </header>
           <section className="py-8 pb-30 lg:text-left xl:pr-[25%]">
             <div>
-              <h1 className="break-words sm:break-normal text-5xl sm:text-7xl xl:text-8xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight 2xl:pr-[25%]">
+              <h1 className="break-words sm:break-normal text-5xl sm:text-7xl xl:text-8xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight 2xl:pr-[25%] hyphens-auto">
                 AUTONOMOUS,
                 OPEN SOURCE,
                 VALUE.
               </h1>
-              <p className="px-2 text-2xl xl:text-4xl font-extralight mb-5 xl:pr-[50%]">
+              <p className="px-2 text-2xl xl:text-4xl font-extralight mb-5 xl:pr-[20%] text-gray-900">
                 <b className="font-extrabold">EVRO</b> stands for <b className="font-extrabold">EVOLUTIONARY RESONATING ORGANISM</b>. 
                 An open-source protocol that maintains synthetic value units through
                 fully decentralized smart-contract mechanics. Built on Liquity V2 principles
@@ -87,7 +87,7 @@ export default function Home() {
 
       <main>
         {/* Motivation Section */}
-        <section className="relative py-22 sm:pb-55 md:-bottom-7 xl:-bottom-13">
+        <section className="relative py-22 sm:pb-55 md:-bottom-7 xl:-bottom-13 lg:min-h-[1000px] flex flex-col justify-center">
           <div className="absolute inset-0 -z-10">
             <picture>
               {/* Mobile */}
@@ -164,7 +164,7 @@ export default function Home() {
         </section>
 
         {/* Core Features Section */}
-        <section className="relative pt-24 sm:py-24 bottom-20">
+        <section className="relative pt-24 sm:py-24 bottom-20 lg:min-h-[2364px] flex flex-col justify-center">
           <div className="absolute inset-0 -z-20" style={{ height: 'calc(100% + 150px)' }}>
             <picture>
               {/* Mobile */}
@@ -183,8 +183,17 @@ export default function Home() {
             </picture>
           </div>
           <div className="max-w-[2000px] mx-auto px-5 py-28">
-            <h2 className="tracking-[-0.2em] text-6xl md:text-7xl xl:text-8xl font-extrabold text-center mb-16 xl:mb-30 break-words sm:break-normal mr-4">
-              CORE FEATURES
+            <h2 className="relative tracking-[-0.2em] text-6xl md:text-7xl xl:text-8xl font-extrabold text-center mb-16 xl:mb-30 break-words sm:break-normal mr-4">
+              <span 
+                className="absolute top-0 left-0 w-full h-full text-transparent" 
+                style={{ WebkitTextStroke: '6px #EFA960' }}
+                aria-hidden="true"
+              >
+                CORE FEATURES
+              </span>
+              <span className="relative text-gray-900">
+                CORE FEATURES
+              </span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-10 relative xl:px-[5%] xl:pb-[5%]">
               {/* Stability Pools - Top Left */}
@@ -236,7 +245,7 @@ export default function Home() {
         </section>
 
         {/* Community Section */}
-        <section className="relative py-6 pt-2 -mt-4 pb-12">
+        <section className="relative py-6 pt-2 -mt-4 pb-12 lg:min-h-[1018px] flex flex-col justify-center">
           <div className="absolute inset-0 -z-10">
             <picture>
               {/* Mobile */}
@@ -254,7 +263,7 @@ export default function Home() {
               <img src="/assets/img-community-xl.png" alt="" className="w-full h-full" />
             </picture>
           </div>
-          <div className="max-w-[2000px] mx-auto px-5">
+          <div className="max-w-[2000px] mx-auto px-5 lg:px-40">
             <div className="text-center md:px-25">
               <h2 className="text-4xl sm:text-5xl font-extrabold tracking-[-0.2em] mt-24">
                 EVRO IS COMMUNITY GOVERNED AND OPEN-SOURCE
