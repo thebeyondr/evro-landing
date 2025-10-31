@@ -282,7 +282,7 @@ export default function Home() {
                     <h3 className={`text-3xl xl:text-5xl font-extrabold tracking-[-0.25em] mb-8 ${feature.styles.titleMarginTop}`}>
                       {feature.title}
                     </h3>
-                    <p className="text-lg xl:text-2xl font-light">
+                    <p className="text-lg xl:text-3xl font-light">
                       {feature.description}
                     </p>
                   </div>
@@ -357,7 +357,7 @@ export default function Home() {
           </picture>
         </div>
         <div className="max-w-[2000px] mx-auto text-center px-2 py-8 md:px-25 lg:px-20">
-            <p className="font-light text-2xl text-gray-600 mt-5">
+            <p className="font-light text-2xl text-gray-700 mt-5">
               EVRO IS AN AUTONOMOUS SOFTWARE DEPLOYED ON PUBLIC BLOCKCHAINS. 
               IT DOES NOT ISSUE, HOLD OR REDEEM ASSETS AND IS NOT A FINANCIAL
               SERVICE OR PRODUCT. INTERACTIONS WITH THE PROTOCOL OCCUR DIRECTLY
