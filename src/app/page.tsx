@@ -134,9 +134,9 @@ export default function Home() {
 
           <section id="main-content" className="py-8 pb-30 lg:text-left xl:pr-[25%]">
             <div>
-              <h1 className="text-3xl sm:text-6xl xl:text-7xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight 2xl:pr-[25%] hyphens-auto">
-                AUTONOMOUS,
-                OPEN SOURCE,
+              <h1 className="text-3xl sm:text-6xl xl:text-7xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight 2xl:pr-[25%] whitespace-pre-line">
+                AUTONOMOUS,<br />
+                OPEN SOURCE,<br />
                 VALUE.
               </h1>
               <p className="px-2 text-xl xl:text-3xl font-extralight mb-5 xl:pr-[20%] text-gray-900">
@@ -279,10 +279,10 @@ export default function Home() {
                     key={feature.title}
                     className={`${baseClasses} ${feature.offset} ${styleClasses}`}
                   >
-                    <h3 className={`text-3xl xl:text-5xl font-extrabold tracking-[-0.2em] mb-8 ${feature.styles.titleMarginTop}`}>
+                    <h3 className={`text-3xl xl:text-5xl font-extrabold tracking-[-0.25em] mb-8 ${feature.styles.titleMarginTop}`}>
                       {feature.title}
                     </h3>
-                    <p className="text-3xl xl:text-4xl font-extralight">
+                    <p className="text-lg xl:text-2xl font-light">
                       {feature.description}
                     </p>
                   </div>
