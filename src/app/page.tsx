@@ -151,7 +151,7 @@ export default function Home() {
               <div className="justify-center sm:justify-start sm:ml-2 flex -mb-10 -mt-4 xl:mt-2">
                 <Link 
                   href="#"
-                  className="cursor-pointer group hover:bg-gray-900 hover:text-[#F5889B] transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 xl:p-6 px-10 md:w-100 xl:w-150 flex items-center justify-center"
+                  className="cursor-pointer group hover:bg-gray-900 hover:text-[#F5889B] transition-transform duration-300 bg-black text-[#F5889B] p-4 xl:p-6 px-10 md:w-100 xl:w-150 flex items-center justify-center"
                 >
                   <b className="tracking-[-0.2em] text-2xl md:text-3xl xl:text-4xl xl:py-2">GET ON EVRO</b>
                   <ArrowRight className="size-8 ml-3 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
@@ -254,7 +254,7 @@ export default function Home() {
             </picture>
           </div>
           <div className="max-w-[2000px] mx-auto px-5 py-28">
-            <h2 className="relative tracking-[-0.2em] text-3xl md:text-7xl xl:text-8xl font-extrabold text-center mb-16 xl:mb-30 break-words sm:break-normal mr-4">
+            <h2 className="relative tracking-[-0.2em] text-3xl md:text-7xl xl:text-8xl font-extrabold text-center mb-16 xl:mb-30 wrap-break-word sm:break-normal mr-4">
               <span 
                 className="absolute top-0 left-0 w-full h-full text-transparent" 
                 style={{ WebkitTextStroke: '6px #EFA960' }}
@@ -343,7 +343,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-[#757BA3] py-5">
-        <div className="w-full aspect-[3085/812] relative overflow-hidden">
+        <div className="w-full aspect-3085/812 relative overflow-hidden">
           <picture>
             <source media="(max-width: 768px)" srcSet="/assets/img-logo-pattern-sm.png" type="image/png" />
             <source media="(max-width: 1366px)" srcSet="/assets/img-logo-pattern-md.png" type="image/png" />
