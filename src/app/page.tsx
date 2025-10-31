@@ -66,6 +66,13 @@ const coreFeatures = [
 export default function Home() {
   return (
     <div>
+      {/* Skip to content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-black focus:text-[#F5889B] focus:outline-2 focus:outline-[#F5889B] focus:outline-offset-2 rounded"
+      >
+        Skip to content
+      </a>
       {/* Hero Section */}
       <div className="relative">
         <div className="absolute inset-0 -z-10" style={{ height: 'calc(100% + 260px)' }}>
@@ -82,14 +89,16 @@ export default function Home() {
             {/* Wide */}
             <source media="(min-width: 2049px)" srcSet="/assets/img-hero-xl.webp" type="image/webp" />
             <source media="(min-width: 2049px)" srcSet="/assets/img-hero-xl.png" type="image/png" />
-            <img src="/assets/img-hero-xl.png" alt="" className="w-full h-full" />
+            <img src="/assets/img-hero-xl.png" alt="" className="w-full h-full" aria-hidden="true" />
           </picture>
            <video
             autoPlay
             loop
             muted
             playsInline
-            className="hidden 2xl:block absolute top-0 right-0 h-full h-auto"
+            preload="none"
+            className="hidden 2xl:block absolute top-0 right-0 h-full"
+            aria-hidden="true"
           >
             <source src="/assets/looptrim.webm" type="video/webm" />
           </video>
@@ -101,8 +110,8 @@ export default function Home() {
                 <Link href="/">
                   <Image 
                     src="/assets/Evro-Logo-wordmark.svg" 
-                    height={0} 
-                    width={0} 
+                    height={80} 
+                    width={200} 
                     alt="Evro Logo" 
                     className="w-16 xl:w-20 h-auto"
                     priority
@@ -110,16 +119,20 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex items-center gap-6">
-                <button>
-                  <Link href="https://github.com/evro-finance" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="size-6 xl:size-10 md:text-[#F5889B]" />
-                  </Link>
-                </button>
+                <Link 
+                  href="https://github.com/evro-finance" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="View EVRO on GitHub"
+                  className="inline-flex items-center justify-center"
+                >
+                  <FaGithub className="size-6 xl:size-10 md:text-[#F5889B]" />
+                </Link>
               </div>
             </div>
           </header>
 
-          <section className="py-8 pb-30 lg:text-left xl:pr-[25%]">
+          <section id="main-content" className="py-8 pb-30 lg:text-left xl:pr-[25%]">
             <div>
               <h1 className="text-3xl sm:text-6xl xl:text-7xl font-black tracking-[-0.2em] text-gray-900 mb-6 sm:mb-8 leading-tight 2xl:pr-[25%] hyphens-auto">
                 AUTONOMOUS,
@@ -136,10 +149,13 @@ export default function Home() {
               </p>
               <br/>
               <div className="justify-center sm:justify-start sm:ml-2 flex -mb-10 -mt-4 xl:mt-2">
-                <button className="cursor-pointer group hover:bg-gray-900 hover:text-[#F5889B] transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 xl:p-6 px-10 md:w-100 xl:w-150 flex items-center justify-center">
+                <Link 
+                  href="#"
+                  className="cursor-pointer group hover:bg-gray-900 hover:text-[#F5889B] transition-transform duration-300 bg-black text-[#F5889B] border border-1 p-4 xl:p-6 px-10 md:w-100 xl:w-150 flex items-center justify-center"
+                >
                   <b className="tracking-[-0.2em] text-2xl md:text-3xl xl:text-4xl xl:py-2">GET ON EVRO</b>
-                  <ArrowRight className="size-8 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
-                </button>
+                  <ArrowRight className="size-8 ml-3 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
+                </Link>
               </div>
             </div>
           </section>
@@ -162,7 +178,7 @@ export default function Home() {
               {/* Wide */}
               <source media="(min-width: 2049px)" srcSet="/assets/img-motivation-xl.webp" type="image/webp" />
               <source media="(min-width: 2049px)" srcSet="/assets/img-motivation-xl.png" type="image/png" />
-              <img src="/assets/img-motivation-xl.png" alt="" className="w-full h-full" />
+              <img src="/assets/img-motivation-xl.png" alt="" className="w-full h-full" aria-hidden="true" />
             </picture>
           </div>
           <div className="max-w-[2000px] mx-auto px-4 sm:px-0">
@@ -202,15 +218,15 @@ export default function Home() {
               {/* Wide */}
               <source media="(min-width: 2049px)" srcSet="/assets/img-stats-xl.webp" type="image/webp" />
               <source media="(min-width: 2049px)" srcSet="/assets/img-stats-xl.png" type="image/png" />
-              <img src="/assets/img-stats-xl.png" alt="" className="w-full h-full" />
+              <img src="/assets/img-stats-xl.png" alt="" className="w-full h-full" aria-hidden="true" />
             </picture>
           </div>
-          <div className="max-w-5xl grid grid-cols-1 xl:grid-cols-3 gap-10 xl:gap-5 mx-auto">
+          <div className="max-w-5xl grid grid-cols-1 lg:grid-cols-3 gap-10 xl:gap-5 mx-auto">
             {stats.map((stat) => (
               <div key={stat.value} className="flex flex-col items-center justify-center">
-                <div className="text-5xl font-bold tracking-[-0.15em] mb-4">{stat.value}</div>
-                <div className="text-base sm:text-lg xl:text-xl">{stat.labelLineOne}</div>
-                <div className="text-base sm:text-lg xl:text-xl">{stat.labelLineTwo}</div>
+                <div className="text-5xl xl:text-7xl font-bold tracking-[-0.15em] mb-4 tabular-nums font-lexend-zetta">{stat.value}</div>
+                <div className="text-base sm:text-lg xl:text-xl font-lexend-zetta">{stat.labelLineOne}</div>
+                <div className="text-base sm:text-lg xl:text-xl font-lexend-zetta">{stat.labelLineTwo}</div>
               </div>
             ))}
           </div>
@@ -234,7 +250,7 @@ export default function Home() {
               {/* Wide */}
               <source media="(min-width: 2049px)" srcSet="/assets/img-corefeature-xl.webp" type="image/webp" />
               <source media="(min-width: 2049px)" srcSet="/assets/img-corefeature-xl.png" type="image/png" />
-              <img src="/assets/img-corefeature-xl.png" alt="" className="w-full h-full" />
+              <img src="/assets/img-corefeature-xl.png" alt="" className="w-full h-full" aria-hidden="true" />
             </picture>
           </div>
           <div className="max-w-[2000px] mx-auto px-5 py-28">
@@ -292,7 +308,7 @@ export default function Home() {
               {/* Wide */}
               <source media="(min-width: 2049px)" srcSet="/assets/img-community-xl.webp" type="image/webp" />
               <source media="(min-width: 2049px)" srcSet="/assets/img-community-xl.png" type="image/png" />
-              <img src="/assets/img-community-xl.png" alt="" className="w-full h-full" />
+              <img src="/assets/img-community-xl.png" alt="" className="w-full h-full" aria-hidden="true" />
             </picture>
           </div>
           <div className="max-w-[2000px] mx-auto px-5 lg:px-40">
@@ -307,10 +323,13 @@ export default function Home() {
               </p>
               <br/>
               <div className="flex justify-center">
-                <button className="cursor-pointer group hover:bg-gray-900 hover:text-[#F5889B] transition-transform duration-300 bg-black text-white font-bold p-4 text-2xl w-full flex items-center justify-center mb-1 md:w-100">
+                <Link 
+                  href="#"
+                  className="cursor-pointer group hover:bg-gray-900 hover:text-[#F5889B] transition-transform duration-300 bg-black text-white font-bold p-4 text-2xl w-full flex items-center justify-center mb-1 md:w-100"
+                >
                   <b className="tracking-[-0.2em]">PARTICIPATE</b>
-                  <ArrowRight className="w-6 h-6 ml-4 group-hover:translate-x-2 transition-transform duration-300" />
-                </button>
+                  <ArrowRight className="w-6 h-6 ml-4 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
+                </Link>
               </div>
             </div>
             <br/>

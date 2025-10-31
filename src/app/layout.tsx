@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Oswald, Lexend_Zetta } from "next/font/google";
 import "./globals.css";
 
@@ -36,6 +36,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,11 +50,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preload" as="image" href="/assets/Evro-Logo-wordmark.svg" />
-      </head>
       <body
-        className={`${oswald.className} ${lexendZetta.className} antialiased`}
+        className={`${oswald.variable} ${lexendZetta.variable} antialiased`}
       >
         {children}
       </body>
