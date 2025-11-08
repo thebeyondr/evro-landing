@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight, Bell } from "lucide-react";
 import TallyForm from "@/components/TallyForm";
 
 const stats = [
@@ -44,7 +44,7 @@ const coreFeatures = [
 	},
 	{
 		title: "Seamless Integration",
-		description: "Designed for composability — wallets, interfaces, and DeFi tools can interact with EVRO contracts directly through permissionless endpoints.",
+		description: "Designed for composability, wallets, interfaces, and DeFi tools can interact with EVRO contracts directly through permissionless endpoints.",
 		offset: "",
 		styles: {
 			paddingTop: "md:pt-1",
@@ -127,23 +127,19 @@ export default function Home() {
 							VALUE.
 						</h1>
 						<p className="text-lg xl:text-xl font-light text-gray-900 max-w-lg">
-							<b className="font-bold">EVRO</b> stands for <b className="font-bold">EVOLUTIONARY RESONATING ORGANISM</b>.
-							An open-source protocol that maintains synthetic value units through
-							fully decentralized smart-contract mechanics. Built on Liquity V2 principles
-							and deployed on Gnosis, it enables on-chain users to <b className="font-bold">CREATE,
-								MANAGE AND BALANCE COLLATERALIZED VAULTS</b>, without issuers, custodians
-							or intermediaries.
+							<b className="font-bold">EVRO</b> is an open-source protocol deployed on Gnosis that enables you to <b className="font-bold">CREATE,
+								MANAGE AND BALANCE COLLATERALIZED VAULTS</b> without issuers, custodians, or intermediaries.
+							Built on Liquity V2 principles, EVRO operates through fully decentralized smart contracts with no administrative control and no upgrade authority.
 						</p>
 						<br />
-						<div className="">
-							<Link
-								href="#signup"
-								className="cursor-pointer group hover:bg-gray-900 hover:text-[#F5889B] transition-transform duration-300 bg-black text-[#F5889B] p-2 xl:p-3 px-6 md:w-64 xl:w-80 flex items-center justify-center"
-							>
-								<b className="tracking-[-0.2em] text-lg md:text-xl xl:text-2xl xl:py-2">GET EVRO</b>
-								<ArrowRight className="hidden lg:block size-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
-							</Link>
-						</div>
+						<Link
+							href="#signup"
+							className="group cursor-pointer group flex items-center justify-center bg-black text-[#F5889B] hover:text-white p-2 xl:p-3 px-6 md:w-48 xl:w-64 hover:bg-gray-900 transition-colors duration-200"
+							aria-label="Scroll to sign up form"
+						>
+							<span className="tracking-[-0.2em] text-lg md:text-xl xl:py-2 font-lexend-zetta font-semibold">GET NOTIFIED</span>
+							<Bell className="hidden lg:block size-5 ml-3 transition-transform duration-300 group-hover:rotate-12" aria-hidden="true" />
+						</Link>
 					</div>
 				</section>
 			</div>

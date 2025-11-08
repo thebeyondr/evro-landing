@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
 export default function TallyForm() {
@@ -8,6 +8,36 @@ export default function TallyForm() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSuccess, setIsSuccess] = useState(false);
 	const [error, setError] = useState<string | null>(null);
+	const emailInputRef = useRef<HTMLInputElement>(null);
+	const formRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting && emailInputRef.current && !isSuccess) {
+						// Small delay to ensure smooth scroll completes
+						setTimeout(() => {
+							emailInputRef.current?.focus();
+						}, 300);
+					}
+				});
+			},
+			{
+				threshold: 0.3, // Trigger when 30% of the form is visible
+			}
+		);
+
+		if (formRef.current) {
+			observer.observe(formRef.current);
+		}
+
+		return () => {
+			if (formRef.current) {
+				observer.unobserve(formRef.current);
+			}
+		};
+	}, [isSuccess]);
 
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -67,16 +97,20 @@ export default function TallyForm() {
 	}
 
 	return (
-		<div className="max-w-4xl mx-auto text-center space-y-6">
+		<div ref={formRef} className="max-w-4xl mx-auto text-center space-y-6">
 			<h2 className="text-2xl sm:text-3xl font-bold tracking-[-0.2em] mt-10">
-				BE AMONG THE FIRST ON EVRO
+				GET EARLY ACCESS TO EVRO
 			</h2>
-			<form onSubmit={handleSubmit} className="flex flex-col md:flex-row md:items-end md:justify-center gap-4 md:gap-6" noValidate>
-				<div className="flex-1 max-w-md mx-auto md:mx-0">
+			<p className="text-lg sm:text-xl font-light max-w-2xl mx-auto px-4">
+				Be among the first to access EVRO when it launches. Get priority access to deploy liquidity and interact with Gnosis-specific assets through Gnosis Pay.
+			</p>
+			<form onSubmit={handleSubmit} className="flex flex-col md:flex-row md:items-end md:justify-center gap-4">
+				<div className="flex-1 lg:max-w-sm">
 					<label htmlFor="email" className="sr-only">
 						E-mail <span className="text-[#F5889B]">*</span>
 					</label>
 					<input
+						ref={emailInputRef}
 						type="email"
 						id="email"
 						name="email"
@@ -99,7 +133,7 @@ export default function TallyForm() {
 					<button
 						type="submit"
 						disabled={isSubmitting || !email.trim()}
-						className="cursor-pointer group hover:bg-gray-900 hover:text-orange-500 transition-transform duration-300 bg-black text-white font-bold p-3 text-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black disabled:hover:text-white border-0 outline-none"
+						className="cursor-pointer group hover:bg-gray-900 hover:text-orange-500 transition-transform duration-300 bg-black text-white font-bold p-3 text-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black disabled:hover:text-white border-0 outline-none w-full md:w-auto"
 						style={{ backgroundColor: '#000000' }}
 					>
 						{isSubmitting ? (
