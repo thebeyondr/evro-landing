@@ -2,6 +2,16 @@
 
 import { useState, FormEvent, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import Script from "next/script";
+
+declare global {
+	interface Window {
+		Tally?: {
+			openPopup: (formId: string, options?: Record<string, unknown>) => void;
+			openForm: (formId: string, options?: Record<string, unknown>) => void;
+		};
+	}
+}
 
 export default function TallyForm() {
 	const [email, setEmail] = useState("");
@@ -39,99 +49,90 @@ export default function TallyForm() {
 		};
 	}, [isSuccess]);
 
+	useEffect(() => {
+		// Listen for Tally form submission events
+		const handleMessage = (event: MessageEvent) => {
+			if (event.origin !== "https://tally.so") return;
+
+			if (event.data?.type === "tally.formSubmitted" || event.data?.eventId === "FORM_SUBMITTED") {
+				setIsSuccess(true);
+				setEmail("");
+				setIsSubmitting(false);
+			}
+		};
+
+		window.addEventListener("message", handleMessage);
+		return () => window.removeEventListener("message", handleMessage);
+	}, []);
+
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setIsSubmitting(true);
 		setError(null);
 
 		try {
-			// Create a hidden iframe to submit the form
+			// Create a hidden iframe with Tally form embed
 			const iframe = document.createElement("iframe");
-			iframe.style.display = "none";
+			iframe.style.position = "fixed";
+			iframe.style.top = "-9999px";
+			iframe.style.left = "-9999px";
+			iframe.style.width = "1px";
+			iframe.style.height = "1px";
+			iframe.style.border = "0";
+			iframe.setAttribute("data-tally-src", "https://tally.so/r/Zj5O6o?transparentBackground=1&formEventsForwarding=1");
+			iframe.src = "https://tally.so/r/Zj5O6o?transparentBackground=1&formEventsForwarding=1";
 			iframe.name = "tally-submit-iframe";
 			document.body.appendChild(iframe);
 
-			// Create a form that matches Tally's expected structure
-			const submitForm = document.createElement("form");
-			submitForm.method = "POST";
-			submitForm.action = "https://tally.so/r/Zj5O6o";
-			submitForm.target = "tally-submit-iframe";
-			submitForm.style.display = "none";
-			submitForm.setAttribute("enctype", "application/x-www-form-urlencoded");
-
-			// Use the actual Tally form field ID
-			// The field ID from the Tally form is: 20d4cfea-4acf-40ce-8ffe-c6154cadbb83
-			const fieldId = "20d4cfea-4acf-40ce-8ffe-c6154cadbb83";
-
-			// Tally forms typically use the field ID as the name attribute
-			// Try the ID directly first, then common variations
-			const input = document.createElement("input");
-			input.type = "hidden";
-			input.name = fieldId; // Use the field ID as the name
-			input.value = email;
-			submitForm.appendChild(input);
-
-			document.body.appendChild(submitForm);
-			submitForm.submit();
-
-			// Listen for success message from iframe (if CORS allows)
+			// Wait for iframe to load, then fill and submit the form
 			iframe.onload = () => {
 				setTimeout(() => {
 					try {
 						const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
 						if (iframeDoc) {
-							const bodyText = iframeDoc.body?.textContent?.toLowerCase() || "";
-							if (bodyText.includes("thank") || bodyText.includes("success") || bodyText.includes("submitted")) {
-								setIsSuccess(true);
-								setEmail("");
-								setIsSubmitting(false);
-							} else {
-								setError("Submission may have failed. Please check your email or try again.");
-								setIsSubmitting(false);
-							}
-						} else {
-							// CORS blocked - assume success after delay
-							setTimeout(() => {
-								setIsSuccess(true);
-								setEmail("");
-								setIsSubmitting(false);
-							}, 1500);
-						}
-					} catch {
-						// CORS blocked - assume success
-						setTimeout(() => {
-							setIsSuccess(true);
-							setEmail("");
-							setIsSubmitting(false);
-						}, 1500);
-					}
+							const form = iframeDoc.querySelector('form');
+							if (form) {
+								const emailInput = iframeDoc.getElementById("20d4cfea-4acf-40ce-8ffe-c6154cadbb83") as HTMLInputElement;
+								if (emailInput) {
+									emailInput.value = email;
+									emailInput.dispatchEvent(new Event("input", { bubbles: true }));
+									emailInput.dispatchEvent(new Event("change", { bubbles: true }));
 
-					// Clean up
-					setTimeout(() => {
-						if (document.body.contains(submitForm)) {
-							document.body.removeChild(submitForm);
+									// Find and click submit button
+									const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+									if (submitButton) {
+										submitButton.click();
+									} else {
+										form.submit();
+									}
+
+									// Clean up after delay
+									setTimeout(() => {
+										if (document.body.contains(iframe)) {
+											document.body.removeChild(iframe);
+										}
+									}, 2000);
+									return;
+								}
+							}
 						}
-						if (document.body.contains(iframe)) {
-							document.body.removeChild(iframe);
-						}
-					}, 2000);
-				}, 500);
+					} catch (crossOriginError) {
+						// CORS blocked - form submission will still work via postMessage events
+						console.log("CORS blocked, relying on postMessage events");
+					}
+				}, 1000);
 			};
 
-			// Fallback: assume success after timeout if no error
+			// Fallback timeout
 			setTimeout(() => {
-				if (!isSuccess && !error) {
-					setIsSuccess(true);
-					setEmail("");
-					setIsSubmitting(false);
-				}
-				if (document.body.contains(submitForm)) {
-					document.body.removeChild(submitForm);
-				}
 				if (document.body.contains(iframe)) {
 					document.body.removeChild(iframe);
 				}
-			}, 3000);
+				if (!isSuccess) {
+					setError("Submission timed out. Please try again.");
+					setIsSubmitting(false);
+				}
+			}, 10000);
 		} catch (err) {
 			setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
 			setIsSubmitting(false);
@@ -152,54 +153,60 @@ export default function TallyForm() {
 	}
 
 	return (
-		<div ref={formRef} className="max-w-4xl mx-auto text-center space-y-6">
-			<h2 className="text-2xl sm:text-3xl font-bold tracking-[-0.2em] mt-10">
-				GET EARLY ACCESS TO EVRO
-			</h2>
-			<p className="text-lg sm:text-xl font-light max-w-2xl mx-auto px-4">
-				Be among the first to access EVRO when it launches. Get priority access to deploy liquidity and interact with Gnosis-specific assets through Gnosis Pay.
-			</p>
-			<form onSubmit={handleSubmit} className="flex flex-col md:flex-row md:items-end md:justify-center gap-4">
-				<div className="flex-1 lg:max-w-sm">
-					<label htmlFor="email" className="sr-only">
-						E-mail <span className="text-[#F5889B]">*</span>
-					</label>
-					<input
-						ref={emailInputRef}
-						type="email"
-						id="email"
-						name="email"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-						placeholder="first@evro.finance"
-						required
-						autoComplete="email"
-						aria-label="Email address"
-						className="w-full px-4 py-3 text-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 rounded-none focus:outline-none focus-visible:ring-4 focus-visible:ring-[#6C3AED] focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:border-[#6C3AED] transition-all duration-200"
-						disabled={isSubmitting}
-					/>
-					{error && (
-						<div className="text-lg font-light text-red-600 mt-2 text-left" role="alert">
-							{error}
-						</div>
-					)}
-				</div>
-				<div className="flex justify-center md:justify-start">
-					<button
-						type="submit"
-						disabled={isSubmitting || !email.trim()}
-						className="cursor-pointer group hover:bg-gray-900 hover:text-orange-500 transition-transform duration-300 bg-black text-white font-bold p-3 text-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black disabled:hover:text-white border-0 outline-none w-full md:w-auto"
-						style={{ backgroundColor: '#000000' }}
-					>
-						{isSubmitting ? (
-							<b className="tracking-[-0.2em] font-lexend-zetta">Submitting…</b>
-						) : (
-							<b className="tracking-[-0.2em] font-lexend-zetta">NOTIFY ME</b>
+		<>
+			<Script
+				src="https://tally.so/widgets/embed.js"
+				strategy="lazyOnload"
+			/>
+			<div ref={formRef} className="max-w-4xl mx-auto text-center space-y-6">
+				<h2 className="text-2xl sm:text-3xl font-bold tracking-[-0.2em] mt-10">
+					GET EARLY ACCESS TO EVRO
+				</h2>
+				<p className="text-lg sm:text-xl font-light max-w-2xl mx-auto px-4">
+					Be among the first to access EVRO when it launches. Get priority access to deploy liquidity and interact with Gnosis-specific assets through Gnosis Pay.
+				</p>
+				<form onSubmit={handleSubmit} className="flex flex-col md:flex-row md:items-end md:justify-center gap-4">
+					<div className="flex-1 lg:max-w-sm">
+						<label htmlFor="email" className="sr-only">
+							E-mail <span className="text-[#F5889B]">*</span>
+						</label>
+						<input
+							ref={emailInputRef}
+							type="email"
+							id="email"
+							name="email"
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
+							placeholder="first@evro.finance"
+							required
+							autoComplete="email"
+							aria-label="Email address"
+							className="w-full px-4 py-3 text-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 rounded-none focus:outline-none focus-visible:ring-4 focus-visible:ring-[#6C3AED] focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:border-[#6C3AED] transition-all duration-200"
+							disabled={isSubmitting}
+						/>
+						{error && (
+							<div className="text-lg font-light text-red-600 mt-2 text-left" role="alert">
+								{error}
+							</div>
 						)}
-					</button>
-				</div>
-			</form>
-		</div>
+					</div>
+					<div className="flex justify-center md:justify-start">
+						<button
+							type="submit"
+							disabled={isSubmitting || !email.trim()}
+							className="cursor-pointer group hover:bg-gray-900 hover:text-orange-500 transition-transform duration-300 bg-black text-white font-bold p-3 text-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black disabled:hover:text-white border-0 outline-none w-full md:w-auto"
+							style={{ backgroundColor: '#000000' }}
+						>
+							{isSubmitting ? (
+								<b className="tracking-[-0.2em] font-lexend-zetta">Submitting…</b>
+							) : (
+								<b className="tracking-[-0.2em] font-lexend-zetta">NOTIFY ME</b>
+							)}
+						</button>
+					</div>
+				</form>
+			</div>
+		</>
 	);
 }
 
