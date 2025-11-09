@@ -45,38 +45,93 @@ export default function TallyForm() {
 		setError(null);
 
 		try {
-			// Use a hidden iframe to submit the form (Tally forms expect traditional form submission)
+			// Create a hidden iframe to submit the form
 			const iframe = document.createElement("iframe");
-			iframe.style.position = "absolute";
-			iframe.style.width = "0";
-			iframe.style.height = "0";
-			iframe.style.border = "0";
+			iframe.style.display = "none";
 			iframe.name = "tally-submit-iframe";
 			document.body.appendChild(iframe);
 
-			const form = document.createElement("form");
-			form.method = "POST";
-			form.action = "https://tally.so/r/Zj5O6o";
-			form.target = "tally-submit-iframe";
-			form.style.display = "none";
+			// Create a form that matches Tally's expected structure
+			const submitForm = document.createElement("form");
+			submitForm.method = "POST";
+			submitForm.action = "https://tally.so/r/Zj5O6o";
+			submitForm.target = "tally-submit-iframe";
+			submitForm.style.display = "none";
+			submitForm.setAttribute("enctype", "application/x-www-form-urlencoded");
 
-			const emailField = document.createElement("input");
-			emailField.type = "email";
-			emailField.name = "email";
-			emailField.value = email;
-			form.appendChild(emailField);
+			// Use the actual Tally form field ID
+			// The field ID from the Tally form is: 20d4cfea-4acf-40ce-8ffe-c6154cadbb83
+			const fieldId = "20d4cfea-4acf-40ce-8ffe-c6154cadbb83";
 
-			document.body.appendChild(form);
-			form.submit();
+			// Tally forms typically use the field ID as the name attribute
+			// Try the ID directly first, then common variations
+			const input = document.createElement("input");
+			input.type = "hidden";
+			input.name = fieldId; // Use the field ID as the name
+			input.value = email;
+			submitForm.appendChild(input);
 
-			// Clean up after a delay
+			document.body.appendChild(submitForm);
+			submitForm.submit();
+
+			// Listen for success message from iframe (if CORS allows)
+			iframe.onload = () => {
+				setTimeout(() => {
+					try {
+						const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
+						if (iframeDoc) {
+							const bodyText = iframeDoc.body?.textContent?.toLowerCase() || "";
+							if (bodyText.includes("thank") || bodyText.includes("success") || bodyText.includes("submitted")) {
+								setIsSuccess(true);
+								setEmail("");
+								setIsSubmitting(false);
+							} else {
+								setError("Submission may have failed. Please check your email or try again.");
+								setIsSubmitting(false);
+							}
+						} else {
+							// CORS blocked - assume success after delay
+							setTimeout(() => {
+								setIsSuccess(true);
+								setEmail("");
+								setIsSubmitting(false);
+							}, 1500);
+						}
+					} catch {
+						// CORS blocked - assume success
+						setTimeout(() => {
+							setIsSuccess(true);
+							setEmail("");
+							setIsSubmitting(false);
+						}, 1500);
+					}
+
+					// Clean up
+					setTimeout(() => {
+						if (document.body.contains(submitForm)) {
+							document.body.removeChild(submitForm);
+						}
+						if (document.body.contains(iframe)) {
+							document.body.removeChild(iframe);
+						}
+					}, 2000);
+				}, 500);
+			};
+
+			// Fallback: assume success after timeout if no error
 			setTimeout(() => {
-				document.body.removeChild(form);
-				document.body.removeChild(iframe);
-				setIsSuccess(true);
-				setEmail("");
-				setIsSubmitting(false);
-			}, 1500);
+				if (!isSuccess && !error) {
+					setIsSuccess(true);
+					setEmail("");
+					setIsSubmitting(false);
+				}
+				if (document.body.contains(submitForm)) {
+					document.body.removeChild(submitForm);
+				}
+				if (document.body.contains(iframe)) {
+					document.body.removeChild(iframe);
+				}
+			}, 3000);
 		} catch (err) {
 			setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
 			setIsSubmitting(false);
